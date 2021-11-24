@@ -11,10 +11,11 @@ body {
   width: 100%;
   background: #F5F4F1;
   padding: 20px;
+  z-index: 100;
 }
 
 #header {
-  max-width: 1500px;
+  max-width: 1350px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28,6 +29,14 @@ body {
   margin: auto;
 }
 
+h1 {
+  font-family: dnp-shuei-mgothic-std, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 35px;
+}
+
 #pc-nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -35,18 +44,145 @@ body {
 }
 
 #pc-nav ul li {
-  font-family: Mukta Vaani;
-  padding: 0 10px;
-  letter-spacing: 3px;
-  font-size: 13px;
+  font-family: 'Mukta Vaani', sans-serif;
+  font-weight: 700;
+  padding: 0 15px;
+  letter-spacing: 2px;
+  font-size: 16px;
+}
+
+#pc-nav ul li a {
+  position: relative;
+}
+
+.gnavi li a {
+  /*線の基点とするためrelativeを指定*/
+  position: relative;
+}
+
+.gnavi li.current a,
+.gnavi li a:hover {
+  color: #EF7748;
+}
+
+.gnavi li a::after {
+  content: '';
+  /*絶対配置で線の位置を決める*/
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  /*線の形状*/
+  width: 80%;
+  height: 2px;
+  background: #EF7748;
+  /*アニメーションの指定*/
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+  /*X方向0、Y方向1*/
+  -webkit-transform-origin: center top;
+          transform-origin: center top;
+  /*上部中央基点*/
+}
+
+/*現在地とhoverの設定*/
+.gnavi li.current a::after,
+.gnavi li a:hover::after {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+  /*X方向にスケール拡大*/
 }
 
 h2 {
   font-family: Mukta Vaani;
   letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 30px;
 }
 
-main {
-  padding-top: 120px;
+#top-main {
+  height: 100vh;
+  position: relative;
+  padding-top: 140px;
+}
+
+#slider {
+  width: 80%;
+  height: 70vh;
+  margin: 20px auto 0 auto;
+  max-width: 1200px;
+  z-index: -1;
+}
+
+.top_lead {
+  position: absolute;
+  top: 500px;
+  left: 10%;
+  font-size: 50px;
+  font-weight: 800;
+  color: #fff;
+  -webkit-text-stroke: 1px #000;
+  line-height: 80px;
+}
+
+.top_lead2 {
+  position: absolute;
+  bottom: 100px;
+  right: 10%;
+  font-family: futura-pt, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 120px;
+  letter-spacing: 20px;
+  color: #EAE7E7;
+}
+
+#VISION {
+  padding: 20px;
+  margin: 30px;
+}
+
+.v_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.v_container h2 {
+  -ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+          writing-mode: vertical-rl;
+  text-orientation: sideways;
+  position: relative;
+  padding: 20px;
+}
+
+.v_container h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -200px;
+  width: 1px;
+  height: 200px;
+  margin: auto;
+  background-color: #000;
+}
+
+.v_container .vision-box {
+  margin: 0 50px;
+}
+
+.v_container .vision-box h3 {
+  font-weight: 800;
+  color: #fff;
+  -webkit-text-stroke: 1px #000;
+  margin: 30px;
+  line-height: 50px;
+  font-size: 25px;
 }
 /*# sourceMappingURL=style.css.map */
