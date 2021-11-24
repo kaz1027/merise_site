@@ -12,37 +12,39 @@
     <!--=============Google Font ===============-->
     <link href="https://fonts.googleapis.com/css?family=Lato:900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--機能編 6-1-3 ゆっくりズームアウトさせながら全画面で見せる-->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
     <!--==============レイアウトを制御する独自のCSSを読み込み===============-->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css">
     <link rel="stylesheet" type="text/css" href="./css/reset.css">
-    <link rel="stylesheet" type="text/css" href="./css/contactform.css">
-    <link rel="stylesheet" type="text/css" href="./css/parts.css">
+    <link rel="stylesheet" type="text/css" href="./css/leyout.css">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
-    <header>
-        <h1>merise design</h1>
-        <nav id="pc-nav">
-            <ul>
+    <header id="h-wrapper">
+        <div id="header">
+            <h1><a href="#">merise design</a></h1>
+            <nav id="pc-nav">
                 <ul>
-                    <li><a href="VISION"></a>VISION</li>
-                    <li><a href="SERVIS"></a>SERVIS</li>
-                    <li><a href="WORKS"></a>WORKS</li>
-                    <li><a href="CONPANY"></a>CONPANY</li>
-                    <li><a href="RICRUT"></a>RICRUT</li>
-                    <li><a href="CONTACT"></a>CONTACT</li>
+                    <li><a href="#VISION">VISION</a></li>
+                    <li><a href="#SERVIS">SERVIS</a></li>
+                    <li><a href="#WORKS">WORKS</a></li>
+                    <li><a href="#CONPANY">CONPANY</a></li>
+                    <li><a href="#RICRUT">RICRUT</a></li>
+                    <li><a href="#CONTACT">CONTACT</a></li>
                 </ul>
-            </ul>
-        </nav>
+            </nav>
+        </div>
     </header>
     <main>
         <div id="top-main">
+            <div id="slider"></div>
             <p class="top_lead">一人一人のお客様に寄り添い<br>
                 一貫したデザインコンセプトでブランディングをサポートします。</p>
             <p class="top_lead2">Design Your story</p>
         </div>
         <section id="VISION">
-            <h2>VOSION</h2>
+            <h2 class="vertical">VOSION</h2>
             <h3>「あなただけの魅力」があるから<br>
                 「あなただけのデザイン」を創る
             </h3>
@@ -52,7 +54,7 @@
                     グラフィックデザイン、Webサイト、店内内装から、Tシャツやライターに至るまで、
                     店舗運営に関わるほぼ全てを一貫して制作することで、統一のデザインコンセプトを実現します。
                 </p>
-                <div class="v-btn"><a href="">more</a></div>
+                <div class="btn v-btn"><a href="">more</a></div>
             </div>
             <div class="vision-img"></div>
         </section>
@@ -81,7 +83,7 @@
                     <p>電飾置き看板、マジックミラーディスプレイ、切り文字 ( アクリル板文字・カルプ文字 )、玄関マットなど店内の内装もお任せください。お客様のご希望やお店のコンセプトに沿った店内デザインを実現します。</p>
                 </div>
             </div>
-            <div class="btn"><a href="">サービス詳細へ</a></div>
+            <div class="btn s-btn"><a href="">サービス詳細へ</a></div>
         </section>
 
         <section id="WORKS">
@@ -98,13 +100,13 @@
             <h2>CONPANY</h2>
             <p class="subtitle">会社概要</p>
             <p>会社の概要や、ミライズで働くメンバーについて</p>
-            <div class="c-btn"><a href="">会社概要へ</a></div>
+            <div class="btn"><a href="">会社概要へ</a></div>
         </section>
         <section id="RICRUT">
             <h2>RICRUT</h2>
             <p class="subtitle">求人情報</p>
             <p>ミライズでは働く仲間を募集しています</p>
-            <div class="c-btn"><a href="">求人詳細へ</a></div>
+            <div class="btn"><a href="">求人詳細へ</a></div>
         </section>
     </main>
     <footer>
@@ -114,14 +116,27 @@
             <p class="subtitle">お問い合わせ</p>
             <a href="tel:03-6433-2027">03-6433-2027</a>
             <a href="mailto:nspdesign2012@gmail.com">nspdesign2012@gmail.com</a>
-            
+            <div class="btn"></div>
         </section>
         <section id="FLOW">
             <h2>FLOW US</h2>
             <p class="subtitle">SNSはこちら</p>
-            
+            <ul class="sns-link">
+                <li><a href="#"><img src="./img/ico_tw.png" alt="twitter"></a></li>
+                <li><a href="#"><img src="./img/icon-fb.svg" alt="FaceBook"></a></li>
+                <li><a href="#"><img src="./img/icon-insta.svg" alt="instagram"></a></li>
+            </ul>
+            <div class="footer-contents">Copyright © by merise Co., Ltd.　All rights reserved.</div>
         </section>
     </footer>
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!--機能編 8-1-9 スクロールの速さが変化-->     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!--機能編 6-1-3 ゆっくりズームアウトさせながら全画面で見せる-->   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script>
+    <!--自作のJS--> 
+    <script src="./js/script.js"></script>
 </body>
 </html>
 

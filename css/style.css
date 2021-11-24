@@ -1,1 +1,52 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@charset "UTF-8";
+body {
+  background: #F5F4F1;
+  font-family: "游ゴシック体", YuGothic;
+  color: #13274B;
+}
+
+#h-wrapper {
+  position: fixed;
+  height: 120px;
+  width: 100%;
+  background: #F5F4F1;
+  padding: 20px;
+}
+
+#header {
+  max-width: 1500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 80px;
+  margin: auto;
+}
+
+#pc-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#pc-nav ul li {
+  font-family: Mukta Vaani;
+  padding: 0 10px;
+  letter-spacing: 3px;
+  font-size: 13px;
+}
+
+h2 {
+  font-family: Mukta Vaani;
+  letter-spacing: 3px;
+}
+
+main {
+  padding-top: 120px;
+}
+/*# sourceMappingURL=style.css.map */
