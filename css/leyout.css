@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/*==================================================
+スライダーのためのcss
+===================================*/
+/*========= レイアウトのためのCSS ===============*/
+.wrapper {
+  position: relative;
+}
+
+.container {
+  background: #555;
+}
+
+.container p {
+  padding: 300px 0;
+  text-align: center;
+  color: #fff;
+}
+/*# sourceMappingURL=leyout.css.map */

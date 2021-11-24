@@ -12,120 +12,150 @@
     <!--=============Google Font ===============-->
     <link href="https://fonts.googleapis.com/css?family=Lato:900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta+Vaani:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        (function(d) {
+          var config = {
+            kitId: 'vvv8wrz',
+            scriptTimeout: 3000,
+            async: true
+          },
+          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+      </script>
     <!--==============レイアウトを制御する独自のCSSを読み込み===============-->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css">
     <link rel="stylesheet" type="text/css" href="./css/reset.css">
-    <link rel="stylesheet" type="text/css" href="./css/contactform.css">
-    <link rel="stylesheet" type="text/css" href="./css/parts.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="./css/parts.css"> -->
     <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+
 </head>
 <body>
-    <header id="header">
-        <h1><a href="#">merise design</a></h1>
-        <nav id="pc-nav">
-            <ul>
-                <li><a href="#VISION">VISION</a></li>
-                <li><a href="#SERVIS">SERVIS</a></li>
-                <li><a href="#WORKS">WORKS</a></li>
-                <li><a href="#CONPANY">CONPANY</a></li>
-                <li><a href="#RICRUT">RICRUT</a></li>
-                <li><a href="#CONTACT">CONTACT</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div id="top-main">
-            <div class="top-img"><img src="./img/1200x800.png" alt=""></div>
-            <p class="top_lead">一人一人のお客様に寄り添い<br>
-                一貫したデザインコンセプトでブランディングをサポートします。</p>
-            <p class="top_lead2">Design Your story</p>
-        </div>
-        <section id="VISION">
-            <h2 class="vertical">VOSION</h2>
-            <h3>「あなただけの魅力」があるから<br>
-                「あなただけのデザイン」を創る
-            </h3>
-            
-            <div class="vision-box">
-                <p>私たちの強みは「店舗運営に必要なものは、ほぼ全てつくれる」こと。<br>
-                    グラフィックデザイン、Webサイト、店内内装から、Tシャツやライターに至るまで、
-                    店舗運営に関わるほぼ全てを一貫して制作することで、統一のデザインコンセプトを実現します。
+    <!-- <div id="splash">
+        <div id="splash-logo"><div class="fadeUp">MeRISE.inc</div></div> -->
+        <!--/splash-->
+    </div>
+        <div class="splashbg1"></div>
+        <div class="splashbg2"></div>
+    <div id="container">
+        <header id="h-wrapper">
+            <div id="header">
+                <h1><a href="#">MeRISE<br>INC.</a></h1>
+                <nav id="pc-nav">
+                    <ul class="gnavi">
+                        <li><a href="#VISION">VISION</a></li>
+                        <li><a href="#SERVIS">SERVIS</a></li>
+                        <li><a href="#WORKS">WORKS</a></li>
+                        <li><a href="#CONPANY">CONPANY</a></li>
+                        <li><a href="#RICRUT">RICRUT</a></li>
+                        <li><a href="#CONTACT">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div id="top-main">
+                <div id="slider"></div>
+                <p class="top_lead">「魅力」をデザインに。<br>デザインを「ブランド」に。</p>
+                <p class="top_lead2">Design Your story</p>
+            </div>
+            <section id="VISION">
+                <div class="v_container">
+                    <h2 class="vertical">VISION</h2>
+                    <div class="vision-box">
+                        <h3>「あなただけの魅力」があるから<br>
+                            「あなただけのデザイン」を創る
+                        </h3>
+                        <p>私たちの強みは「店舗運営に必要なものは、ほぼ全てつくれる」こと。<br>
+                            グラフィックデザイン、Webサイト、店内内装から、Tシャツやライターに至るまで、<br>
+                            店舗運営に関わるほぼ全てを一貫して制作することで、統一のデザインコンセプトを実現します。
+                        </p>
+                        <div class="btn v-btn"><a href="">more</a></div>
+                    </div>
+                </div>
+            </section>
+            <img src="" alt="">
+            <section id="SERVIS">
+                <h2>SERVIS</h2>
+                <p class="subtitle">私たちができること</p>
+                <p>私たちミライズデザインは主に中小企業を中心にデザインでブランディングを
+                    サポートしています。<br><br>
+        
+                    私たちが一番大切にしていることは「あなただけのデザインを創る」こと。<br>
+                    ブランディングはマーケティング（すべての売る行為）の一部です。<br>
+                    「ブランド」が大切な時代だからこそ、私たちは「あなたにしかないデザイン」を一緒に追求していきます。
                 </p>
-                <div class="btn v-btn"><a href="">more</a></div>
-            </div>
-            <div class="vision-img"></div>
-        </section>
-
-        <section id="SERVIS">
-            <h2>SERVIS</h2>
-            <p class="subtitle">私たちができること</p>
-            <p>私たちミライズデザインは主に中小企業を中心にデザインでブランディングを
-                サポートしています。<br><br>
-            
-                私たちが一番大切にしていることは「あなただけのデザインを創る」こと。<br>
-                ブランディングはマーケティング（すべての売る行為）の一部です。<br>
-                「ブランド」が大切な時代だからこそ、私たちは「あなたにしかないデザイン」を一緒に追求していきます。
-            </p>
-            <div class="s-contents">
-                <div class="s-box s-contents1">
-                    <h3>グラフィックデザイン</h3>
-                    <p>ロゴ制作、バナー制作はもちろん、チラシ、メニュー表、パンフレットから名刺、ショップカードなどの小さなものまでデザイン制作いたします。</p>
+                <div class="s-contents">
+                    <div class="s-box s-contents1">
+                        <h3>グラフィックデザイン</h3>
+                        <p>ロゴ制作、バナー制作はもちろん、チラシ、メニュー表、パンフレットから名刺、ショップカードなどの小さなものまでデザイン制作いたします。</p>
+                    </div>
+                    <div class="s-box s-contents2">
+                        <h3>WEBデザイン</h3>
+                        <p>ただホームページを作るだけでなく、御社の強みをヒキダシ、お客様の先のお客様のニーズに合わせ、ブランディングを意識したホームページ制作・WEB制作を。</p>
+                    </div>
+                    <div class="s-box s-contents3">
+                        <h3>店舗内装</h3>
+                        <p>電飾置き看板、マジックミラーディスプレイ、切り文字 ( アクリル板文字・カルプ文字 )、玄関マットなど店内の内装もお任せください。お客様のご希望やお店のコンセプトに沿った店内デザインを実現します。</p>
+                    </div>
                 </div>
-                <div class="s-box s-contents2">
-                    <h3>WEBデザイン</h3>
-                    <p>ただホームページを作るだけでなく、御社の強みをヒキダシ、お客様の先のお客様のニーズに合わせ、ブランディングを意識したホームページ制作・WEB制作を。</p>
+                <div class="btn s-btn"><a href="">サービス詳細へ</a></div>
+            </section>
+            <section id="WORKS">
+                <h2>WORKS</h2>
+                <p class="subtitle">制作実績</p>
+                <div class="w-img">
+                    <div class="w-contents"><img src="" alt=""></div>
+                    <div class="w-contents"><img src="" alt=""></div>
+                    <div class="w-contents"><img src="" alt=""></div>
                 </div>
-                <div class="s-box s-contents3">
-                    <h3>店舗内装</h3>
-                    <p>電飾置き看板、マジックミラーディスプレイ、切り文字 ( アクリル板文字・カルプ文字 )、玄関マットなど店内の内装もお任せください。お客様のご希望やお店のコンセプトに沿った店内デザインを実現します。</p>
-                </div>
-            </div>
-            <div class="btn s-btn"><a href="">サービス詳細へ</a></div>
-        </section>
-
-        <section id="WORKS">
-            <h2>WORKS</h2>
-            <p class="subtitle">制作実績</p>
-            <div class="w-img">
-                <div class="w-contents"><img src="" alt=""></div>
-                <div class="w-contents"><img src="" alt=""></div>
-                <div class="w-contents"><img src="" alt=""></div>
-            </div>
-            <div class="btn"><a href="">制作実績へ</a></div>
-        </section>
-        <section id="CONPANY">
-            <h2>CONPANY</h2>
-            <p class="subtitle">会社概要</p>
-            <p>会社の概要や、ミライズで働くメンバーについて</p>
-            <div class="btn"><a href="">会社概要へ</a></div>
-        </section>
-        <section id="RICRUT">
-            <h2>RICRUT</h2>
-            <p class="subtitle">求人情報</p>
-            <p>ミライズでは働く仲間を募集しています</p>
-            <div class="btn"><a href="">求人詳細へ</a></div>
-        </section>
-    </main>
-    <footer>
-        <section id="CONTACT">
-            
-            <h2>CONTACT</h2>
-            <p class="subtitle">お問い合わせ</p>
-            <a href="tel:03-6433-2027">03-6433-2027</a>
-            <a href="mailto:nspdesign2012@gmail.com">nspdesign2012@gmail.com</a>
-            <div class="btn"></div>
-        </section>
-        <section id="FLOW">
-            <h2>FLOW US</h2>
-            <p class="subtitle">SNSはこちら</p>
-            <ul class="sns-link">
-                <li><a href="#"><img src="./img/ico_tw.png" alt="twitter"></a></li>
-                <li><a href="#"><img src="./img/icon-fb.svg" alt="FaceBook"></a></li>
-                <li><a href="#"><img src="./img/icon-insta.svg" alt="instagram"></a></li>
-            </ul>
-            <div class="footer-contents">Copyright © by merise Co., Ltd.　All rights reserved.</div>
-        </section>
-    </footer>
+                <div class="btn"><a href="">制作実績へ</a></div>
+            </section>
+            <section id="CONPANY">
+                <h2>CONPANY</h2>
+                <p class="subtitle">会社概要</p>
+                <p>会社の概要や、ミライズで働くメンバーについて</p>
+                <div class="btn"><a href="">会社概要へ</a></div>
+            </section>
+            <section id="RICRUT">
+                <h2>RICRUT</h2>
+                <p class="subtitle">求人情報</p>
+                <p>ミライズでは働く仲間を募集しています</p>
+                <div class="btn"><a href="">求人詳細へ</a></div>
+            </section>
+        </main>
+        <footer>
+            <section id="CONTACT">
+        
+                <h2>CONTACT</h2>
+                <p class="subtitle">お問い合わせ</p>
+                <a href="tel:03-6433-2027">03-6433-2027</a>
+                <a href="mailto:nspdesign2012@gmail.com">nspdesign2012@gmail.com</a>
+                <div class="btn"></div>
+            </section>
+            <section id="FLOW">
+                <h2>FLOW US</h2>
+                <p class="subtitle">SNSはこちら</p>
+                <ul class="sns-link">
+                    <li><a href="#"><img src="./img/ico_tw.png" alt="twitter"></a></li>
+                    <li><a href="#"><img src="./img/icon-fb.svg" alt="FaceBook"></a></li>
+                    <li><a href="#"><img src="./img/icon-insta.svg" alt="instagram"></a></li>
+                </ul>
+                <div class="footer-contents">Copyright © by merise Co., Ltd.　All rights reserved.</div>
+            </section>
+        </footer>
+    </div>
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!--機能編 8-1-9 スクロールの速さが変化-->     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!--機能編 6-1-3 ゆっくりズームアウトさせながら全画面で見せる-->   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script>
+    <!--自作のJS--> 
+    <script src="./js/script.js"></script>
 </body>
 </html>
 

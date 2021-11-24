@@ -1,0 +1,183 @@
+@charset "UTF-8";
+/*========= ローディング画面のためのCSS ===============*/
+#splash {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #EF7748;
+  z-index: 9999999;
+  text-align: center;
+  color: #fff;
+}
+
+#splash-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+  letter-spacing: 0.2em;
+  font-family: dnp-shuei-mgothic-std, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/*========= 画面遷移のためのCSS ===============*/
+/*画面遷移アニメーション*/
+.splashbg1,
+.splashbg2 {
+  display: none;
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear .splashbg1,
+body.appear .splashbg2 {
+  display: block;
+}
+
+/*上に消えるエリア*/
+body.appear .splashbg1 {
+  -webkit-animation-name: PageAnime;
+          animation-name: PageAnime;
+  -webkit-animation-duration: 1.4s;
+          animation-duration: 1.4s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  content: "";
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  bottom: 50%;
+  left: 0;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  background-color: #EF7748;
+  /*伸びる背景色の設定*/
+}
+
+@-webkit-keyframes PageAnime {
+  0% {
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  100% {
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+}
+
+@keyframes PageAnime {
+  0% {
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  100% {
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+}
+
+/*下に消えるエリア*/
+body.appear .splashbg2 {
+  -webkit-animation-name: PageAnime2;
+          animation-name: PageAnime2;
+  -webkit-animation-duration: 1.4s;
+          animation-duration: 1.4s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  content: "";
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  top: 50%;
+  left: 0;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  background-color: #EF7748;
+  /*伸びる背景色の設定*/
+}
+
+@-webkit-keyframes PageAnime2 {
+  0% {
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  100% {
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+}
+
+@keyframes PageAnime2 {
+  0% {
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  100% {
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+}
+
+/*画面遷移の後現れるコンテンツ設定*/
+#container {
+  opacity: 0;
+  /*はじめは透過0に*/
+  position: relative;
+  z-index: 1;
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear #container {
+  -webkit-animation-name: PageAnimeAppear;
+          animation-name: PageAnimeAppear;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes PageAnimeAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes PageAnimeAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=parts.css.map */
