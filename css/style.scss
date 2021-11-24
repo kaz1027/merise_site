@@ -1,0 +1,47 @@
+@charset "uft-8";
+body {
+    background: #F5F4F1;
+    font-family: "游ゴシック体", YuGothic;
+    color: #13274B;
+}
+
+#header {
+    position: fixed;
+    height: 120px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #F5F4F1;
+    padding: 20px;
+}
+
+#pc-nav {
+    ul {
+        display: flex;
+        li {
+            font-family: Mukta Vaani;
+            padding: 0 10px;
+            letter-spacing: 3px;
+            font-size: 13px;
+        }
+    }
+}
+
+h2 {
+    font-family: Mukta Vaani;
+    letter-spacing: 3px;
+}
+
+main {
+    padding-top: 120px;
+}
+.top-img {
+    width: 70%;
+    margin: 0 auto;
+    img {
+        width: 100%;
+    }
+}
+
+
