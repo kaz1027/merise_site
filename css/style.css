@@ -5,7 +5,7 @@ body {
   color: #13274B;
 }
 
-#header {
+#h-wrapper {
   position: fixed;
   height: 120px;
   width: 100%;
