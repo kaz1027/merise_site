@@ -5,10 +5,16 @@ body {
   color: #13274B;
 }
 
-#header {
+#h-wrapper {
   position: fixed;
   height: 120px;
   width: 100%;
+  background: #F5F4F1;
+  padding: 20px;
+}
+
+#header {
+  max-width: 1500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -18,8 +24,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #F5F4F1;
-  padding: 20px;
+  line-height: 80px;
+  margin: auto;
 }
 
 #pc-nav ul {
@@ -42,14 +48,5 @@ h2 {
 
 main {
   padding-top: 120px;
-}
-
-.top-img {
-  width: 70%;
-  margin: 0 auto;
-}
-
-.top-img img {
-  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */

@@ -12,30 +12,33 @@
     <!--=============Google Font ===============-->
     <link href="https://fonts.googleapis.com/css?family=Lato:900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--機能編 6-1-3 ゆっくりズームアウトさせながら全画面で見せる-->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
     <!--==============レイアウトを制御する独自のCSSを読み込み===============-->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css">
     <link rel="stylesheet" type="text/css" href="./css/reset.css">
-    <link rel="stylesheet" type="text/css" href="./css/contactform.css">
-    <link rel="stylesheet" type="text/css" href="./css/parts.css">
+    <link rel="stylesheet" type="text/css" href="./css/leyout.css">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
-    <header id="header">
-        <h1><a href="#">merise design</a></h1>
-        <nav id="pc-nav">
-            <ul>
-                <li><a href="#VISION">VISION</a></li>
-                <li><a href="#SERVIS">SERVIS</a></li>
-                <li><a href="#WORKS">WORKS</a></li>
-                <li><a href="#CONPANY">CONPANY</a></li>
-                <li><a href="#RICRUT">RICRUT</a></li>
-                <li><a href="#CONTACT">CONTACT</a></li>
-            </ul>
-        </nav>
+    <header id="h-wrapper">
+        <div id="header">
+            <h1><a href="#">merise design</a></h1>
+            <nav id="pc-nav">
+                <ul>
+                    <li><a href="#VISION">VISION</a></li>
+                    <li><a href="#SERVIS">SERVIS</a></li>
+                    <li><a href="#WORKS">WORKS</a></li>
+                    <li><a href="#CONPANY">CONPANY</a></li>
+                    <li><a href="#RICRUT">RICRUT</a></li>
+                    <li><a href="#CONTACT">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
         <div id="top-main">
-            <div class="top-img"><img src="./img/1200x800.png" alt=""></div>
+            <div id="slider"></div>
             <p class="top_lead">一人一人のお客様に寄り添い<br>
                 一貫したデザインコンセプトでブランディングをサポートします。</p>
             <p class="top_lead2">Design Your story</p>
@@ -126,6 +129,14 @@
             <div class="footer-contents">Copyright © by merise Co., Ltd.　All rights reserved.</div>
         </section>
     </footer>
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!--機能編 8-1-9 スクロールの速さが変化-->     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!--機能編 6-1-3 ゆっくりズームアウトさせながら全画面で見せる-->   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script>
+    <!--自作のJS--> 
+    <script src="./js/script.js"></script>
 </body>
 </html>
 
