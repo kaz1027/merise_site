@@ -5,16 +5,23 @@ body {
     color: #13274B;
 }
 
-#header {
+#h-wrapper {
     position: fixed;
     height: 120px;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background: #F5F4F1;
     padding: 20px;
 }
+
+#header {
+    max-width: 1500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 80px; // これで解決
+    margin: auto;
+}
+
 
 #pc-nav {
     ul {
@@ -36,12 +43,13 @@ h2 {
 main {
     padding-top: 120px;
 }
-.top-img {
-    width: 70%;
-    margin: 0 auto;
-    img {
-        width: 100%;
-    }
-}
+// #slider {
+//     width: 70%;
+//     margin: 0 auto;
+//     max-width: 1200px;
+//     img {
+//         width: 100%;
+//     }
+// }
 
 
