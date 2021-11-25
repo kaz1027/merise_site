@@ -132,9 +132,14 @@ h2 {
     color: #EAE7E7;
 }
 
+section {
+    padding: 50px 10px;
+}
+
 #VISION {
-    padding: 20px;
-    margin: 30px;
+    padding: 50px;
+    // background-color: #fff;
+
 }
 .v_container {
     display: flex;
@@ -225,7 +230,7 @@ h2 {
 }
 
 .v-btn:hover span{
-	color:#fff;
+	color:#D8CDC1;
     border: none;
 }
 
@@ -254,6 +259,30 @@ h2 {
 	}
 }
 
+.yajirushi {
+    position: relative;
+}
+
+.v-btn::after {
+    position: absolute;
+    right: 5%;
+    font-family: 'Material Icons';
+    content: '\e5c8';
+    font-size: 15px;
+    color: #13274B;
+    z-index: 10;
+}
+
+.v-btn:hover::after {
+    position: absolute;
+    font-family: 'Material Icons';
+    content: '\e5c8';
+    font-size: 15px;
+    color: #D8CDC1;
+    z-index: 10;
+    right: 5%;
+    
+}
 
 // .v-btn {
 //     float: right;
@@ -277,7 +306,7 @@ h2 {
 // }
 
 section {
-    padding: 30px 0;
+    padding: 50px 10px;
 }
 
 article {
@@ -315,6 +344,10 @@ article {
     max-width: 600px
 }
 
+#SERVIS {
+    background-color: #fff;
+}
+
 #s-contents {
     display: flex;
     justify-content: center;
@@ -328,17 +361,18 @@ article {
         height: 400px;
         margin: 30px;
         text-align: center;
-        padding: 0 20px 10px 20px;
+        padding: 0 0 10px 20px;
         box-shadow: 0 0 10px rgb(177, 177, 177);
+        padding: 30px 20px;
         h3 {
             font-size: 20px;
             font-weight: bold;
-            margin-bottom: 15px;
+            margin: 40px 0;
         }
         p {
             font-family: dnp-shuei-mgothic-std, sans-serif;
             font-size: 13px;
-            line-height: 20px;
+            line-height: 30px;
         }
     
     }
@@ -370,3 +404,266 @@ article {
     color: #000;
 }
 
+
+.a-center {
+    text-align:center;
+    display: flex;
+    justify-content: center;
+}
+
+.s-btn{
+    /*アニメーションの起点とするためrelativeを指定*/
+    position: relative;
+	overflow: hidden;
+    /*ボタンの形状*/
+    margin: 30px auto;
+	text-decoration: none;
+	display: inline-block;
+   	// border: 1px solid #13274B;/* ボーダーの色と太さ */
+    background-color: #EF7748;
+    padding: 15px 100px;
+    text-align: center;
+    outline: none;
+    letter-spacing: 2px;
+    font-size: 13px;
+    /*アニメーションの指定*/   
+    transition: ease .2s;
+}
+
+/*ボタン内spanの形状*/
+.s-btn span {
+	position: relative;
+	z-index: 3;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
+	color: #fff;
+}
+
+.s-btn:hover span{
+	color:#fff;
+    border: none;
+}
+
+/*== 背景が流れる（斜め） */
+.s-bgskew::before {
+	content: '';
+    /*絶対配置で位置を指定*/
+	position: absolute;
+	top: 0;
+	left: -130%;
+    /*色や形状*/
+	background: #13274B;
+	width:120%;
+	height: 100%;
+	transform: skewX(-25deg);
+}
+
+/*hoverした時のアニメーション*/
+.s-bgskew:hover::before {
+	animation: skewanime .5s forwards;/*アニメーションの名前と速度を定義*/
+}
+
+@keyframes skewanime {
+	100% {
+		left:-10%;/*画面の見えていない左から右へ移動する終了地点*/
+	}
+}
+
+#WORKS {
+    padding: 50px 10px;
+    background-color: #fff;
+}
+
+.w-img {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 50px 0;
+    img {
+        width: 330px;
+        height: 330px;
+        margin: 10px;
+        object-fit: cover;
+        box-shadow: 0 0 20px rgb(177, 177, 177);
+        float: left;
+    }
+}
+
+.separate {
+    display: flex;
+    width: 100%;
+    background-color: #fff;
+    #CONPANY {
+        width: 50%;
+        padding: 50px 10px;
+        background-color: #D8CDC1;
+        text-align: center;
+    }
+    #RICRUT {
+        width: 50%;
+        padding: 50px 10px;
+        background-color: #13274B;
+        text-align: center;
+        color: #D8CDC1;
+    }
+}
+
+.ricrut-btn{
+    /*アニメーションの起点とするためrelativeを指定*/
+    position: relative;
+	overflow: hidden;
+    /*ボタンの形状*/
+    float: right;
+    margin: 30px 0;
+	text-decoration: none;
+	display: inline-block;
+   	border: 1px solid #D8CDC1;/* ボーダーの色と太さ */
+    padding: 15px 100px;
+    text-align: center;
+    outline: none;
+    letter-spacing: 2px;
+    font-size: 13px;
+    /*アニメーションの指定*/   
+    transition: ease .2s;
+}
+
+
+/*ボタン内spanの形状*/
+.ricrut-btn span {
+	position: relative;
+	z-index: 3;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
+	color:#D8CDC1;
+}
+
+.ricrut-btn:hover span{
+	color:#13274B;
+    border: none;
+}
+
+/*== 背景が流れる（斜め） */
+.ricrut-bgskew::before {
+	content: '';
+    /*絶対配置で位置を指定*/
+	position: absolute;
+	top: 0;
+	left: -130%;
+    /*色や形状*/
+	background: #D8CDC1;
+	width:120%;
+	height: 100%;
+	transform: skewX(-25deg);
+}
+
+/*hoverした時のアニメーション*/
+.ricrut-bgskew:hover::before {
+	animation: skewanime .5s forwards;/*アニメーションの名前と速度を定義*/
+}
+
+@keyframes skewanime {
+	100% {
+		left:-10%;/*画面の見えていない左から右へ移動する終了地点*/
+	}
+}
+
+.ricrut-btn::after  {
+    position: absolute;
+    font-family: 'Material Icons';
+    content: '\e5c8';
+    font-size: 15px;
+    color: #D8CDC1;
+    right: 5%;
+}
+
+.ricrut-btn:hover::after  {
+    position: absolute;
+    font-family: 'Material Icons';
+    content: '\e5c8';
+    font-size: 15px;
+    color: #13274B;
+    right: 5%;
+}
+
+.separate_text {
+    margin: 50px 0 20px 0;
+    font-weight: bold;
+    font-family: dnp-shuei-mgothic-std, sans-serif;
+}
+
+#CONTACT {
+    text-align: center;
+    background-color: #F4AB90;
+    width: 100%;
+    padding: 50px 10px;
+}
+
+.form-btn{
+    /*アニメーションの起点とするためrelativeを指定*/
+    position: relative;
+	overflow: hidden;
+    /*ボタンの形状*/
+    margin: 30px 0;
+	text-decoration: none;
+	display: inline-block;
+   	border: 1px solid #13274B;/* ボーダーの色と太さ */
+    padding: 15px 100px;
+    text-align: center;
+    outline: none;
+    letter-spacing: 2px;
+    font-size: 13px;
+    /*アニメーションの指定*/   
+    transition: ease .2s;
+}
+
+
+/*ボタン内spanの形状*/
+.form-btn span {
+	position: relative;
+	z-index: 3;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
+	color: #13274B;
+}
+
+.form-btn:hover span{
+	color: #F4AB90;
+    border: none;
+}
+
+/*== 背景が流れる（斜め） */
+.form-bgskew::before {
+	content: '';
+    /*絶対配置で位置を指定*/
+	position: absolute;
+	top: 0;
+	left: -130%;
+    /*色や形状*/
+	background: #13274B;
+	width:120%;
+	height: 100%;
+	transform: skewX(-25deg);
+}
+
+/*hoverした時のアニメーション*/
+.form-bgskew:hover::before {
+	animation: skewanime .5s forwards;/*アニメーションの名前と速度を定義*/
+}
+
+@keyframes skewanime {
+	100% {
+		left:-10%;/*画面の見えていない左から右へ移動する終了地点*/
+	}
+}
+
+.form-btn::after  {
+    position: absolute;
+    font-family: 'Material Icons';
+    content: '\e5c8';
+    font-size: 15px;
+    color: #13274B;
+    right: 5%;
+}
+
+.form-btn:hover::after  {
+    position: absolute;
+    font-family: 'Material Icons';
+    content: '\e5c8';
+    font-size: 15px;
+    color: #F4AB90;
+    right: 5%;
+}
