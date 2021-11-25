@@ -592,7 +592,17 @@ article {
     background-color: #F4AB90;
     width: 100%;
     padding: 50px 10px;
+    .contact_text {
+        color: #fff;
+        margin-top: 30px;
+    }
+
+    h2 {
+        margin-top: 30px;
+    }
 }
+
+
 
 .form-btn{
     /*アニメーションの起点とするためrelativeを指定*/
@@ -666,4 +676,23 @@ article {
     font-size: 15px;
     color: #F4AB90;
     right: 5%;
+}
+
+#FLOW {
+    text-align: center;
+    .sns-link {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        li {
+            width: 20px;
+            color: #13274B;
+        }
+        img {
+            color: #13274B;
+        }
+    }
+}
+.icon {
+    color: #13274B;
 }

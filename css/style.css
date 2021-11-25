@@ -633,6 +633,15 @@ article img {
   padding: 50px 10px;
 }
 
+#CONTACT .contact_text {
+  color: #fff;
+  margin-top: 30px;
+}
+
+#CONTACT h2 {
+  margin-top: 30px;
+}
+
 .form-btn {
   /*アニメーションの起点とするためrelativeを指定*/
   position: relative;
@@ -711,5 +720,33 @@ article img {
   font-size: 15px;
   color: #F4AB90;
   right: 5%;
+}
+
+#FLOW {
+  text-align: center;
+}
+
+#FLOW .sns-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#FLOW .sns-link li {
+  width: 20px;
+  color: #13274B;
+}
+
+#FLOW .sns-link img {
+  color: #13274B;
+}
+
+.icon {
+  color: #13274B;
 }
 /*# sourceMappingURL=style.css.map */
