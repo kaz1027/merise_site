@@ -145,7 +145,7 @@
 	
 	.fadeUp{
 	animation-name:fadeUpAnime;
-	animation-duration:3s;
+	animation-duration:1s;
 	animation-fill-mode:forwards;
 	opacity:0;
 	}
@@ -252,7 +252,7 @@
   }
   
   /* スクロールをしたら出現する要素にはじめに透過0を指定　*/
-   
+  
   .blurTrigger{
-	  opacity: 0;
+    opacity: 0;
   }
