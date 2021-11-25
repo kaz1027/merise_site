@@ -96,7 +96,7 @@ h1 {
 
 h2 {
   font-family: Mukta Vaani;
-  letter-spacing: 3px;
+  letter-spacing: 5px;
   font-weight: bold;
   font-size: 30px;
 }
@@ -155,7 +155,7 @@ h2 {
   position: relative;
 }
 
-.v_container h2 {
+.v_container .vertical {
   -ms-writing-mode: tb-rl;
   -webkit-writing-mode: vertical-rl;
           writing-mode: vertical-rl;
@@ -163,9 +163,12 @@ h2 {
   position: relative;
   padding: 20px;
   margin-top: 60px;
+  font-family: Mukta Vaani;
+  letter-spacing: 5px;
+  font-size: 30px;
 }
 
-.v_container h2::after {
+.v_container .vertical::after {
   content: '';
   position: absolute;
   left: 0;
@@ -202,7 +205,7 @@ h2 {
   position: absolute;
   content: '';
   width: 100%;
-  height: 340px;
+  height: 380px;
   max-width: 1100px;
   z-index: -1;
   background-color: #D8CDC1;
@@ -210,7 +213,7 @@ h2 {
 }
 
 /*矢印が右に移動して背景がつく*/
-.btn {
+.v-btn {
   /*アニメーションの起点とするためrelativeを指定*/
   position: relative;
   overflow: hidden;
@@ -232,14 +235,14 @@ h2 {
 }
 
 /*ボタン内spanの形状*/
-.btn span {
+.v-btn span {
   position: relative;
   z-index: 3;
   /*z-indexの数値をあげて文字を背景よりも手前に表示*/
   color: #13274B;
 }
 
-.btn:hover span {
+.v-btn:hover span {
   color: #fff;
   border: none;
 }
@@ -280,6 +283,10 @@ h2 {
   }
 }
 
+section {
+  padding: 30px 0;
+}
+
 article {
   height: 500px;
   background-color: #13274B;
@@ -292,8 +299,89 @@ article img {
      object-fit: cover;
 }
 
-#center {
+.c-wrapper {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.s-title {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.subtitle {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.text {
+  margin: 0 auto;
+  font-family: dnp-shuei-mgothic-std, sans-serif;
+  padding: 50px 10px;
+  font-size: 16px;
+  line-height: 40px;
+  max-width: 600px;
+}
+
+#s-contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1100px;
+}
+
+#s-contents .s-box {
+  background-color: #fff;
+  width: 300px;
+  height: 400px;
+  margin: 30px;
+  text-align: center;
+  padding: 0 20px 10px 20px;
+  -webkit-box-shadow: 0 0 10px #b1b1b1;
+          box-shadow: 0 0 10px #b1b1b1;
+}
+
+#s-contents .s-box h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+#s-contents .s-box p {
+  font-family: dnp-shuei-mgothic-std, sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.icon-1:before {
+  font-family: 'Material Icons';
+  content: '\e3c4';
+  font-size: 80px;
+  text-align: center;
+  color: #000;
+  padding: 30px auto;
+}
+
+.icon-2:before {
+  font-family: 'Material Icons';
+  content: '\e326';
+  font-size: 80px;
+  text-align: center;
+  color: #000;
+}
+
+.icon-3:before {
+  font-family: 'Material Icons';
+  content: '\e9b4';
+  font-size: 80px;
+  text-align: center;
+  color: #000;
 }
 /*# sourceMappingURL=style.css.map */
