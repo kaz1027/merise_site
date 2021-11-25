@@ -1,47 +1,258 @@
 @charset "utf-8";
 
+.s-box{
+	opacity: 0;
+}
+
+// 下から
+.fadeUpTrigger{
+    opacity: 0;
+}
+
 /*==================================================
-スライダーのためのcss
+ふわっ
 ===================================*/
-#slider {
-    width: 100%;
-    height: 100vh;/*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
-}
 
-/*========= レイアウトのためのCSS ===============*/
+/* その場で */
+.fadeInTop{
+	animation-name:fadeInAnime;
+	animation-duration:3s;
+	animation-fill-mode:forwards;
+	opacity:0;
+	}
+	
+	@keyframes fadeInAnime{
+	  from {
+		opacity: 0;
+	  }
+	
+	  to {
+		opacity: 1;
+	  }
+	}
+	
 
-a{
-	color: #fff;
-}
+	/* 上から */
 
-a:hover,
-a:active{
-	text-decoration: none;
-}
+.fadeDown{
+	animation-name:fadeDownAnime;
+	animation-duration:0.5s;
+	animation-fill-mode:forwards;
+	opacity:0;
+	}
+	
+	@keyframes fadeDownAnime{
+	  from {
+		opacity: 0;
+		transform: translateY(-100px);
+	  }
+	
+	  to {
+		opacity: 1;
+		transform: translateY(0);
+	  }
+	}
+	
+	/* 左から */
+	
+	.fadeLeft{
+	animation-name:fadeLeftAnime;
+	animation-duration:0.5s;
+	animation-fill-mode:forwards;
+	opacity:0;
+	}
+	
+	@keyframes fadeLeftAnime{
+	  from {
+		opacity: 0;
+		transform: translateX(-100px);
+	  }
+	
+	  to {
+		opacity: 1;
+		transform: translateX(0);
+	  }
+	}
+	
+	/* 右から */
+	
+	.fadeRightTop{
+	animation-name:fadeRightAnime;
+	animation-duration:3s;
+	animation-fill-mode:forwards;
+	opacity:0;
+	}
+	
+	@keyframes fadeRightAnime{
+	  from {
+		opacity: 0;
+		transform: translateX(100px);
+	  }
+	
+	  to {
+		opacity: 1;
+		transform: translateX(0);
+	  }
+	}
 
-h1{
-	position: absolute;
-	z-index: 2;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	text-align: center;
-	font-size:6vw;
-	letter-spacing: 0.1em;
-	text-transform: uppercase;
-	color: #fff;
-}
 
-.wrapper{
-	position: relative;
-}
+	/* 下から */
+	
+	.fadeUpTop{
+	animation-name:fadeUpAnime;
+	animation-duration:4s;
+	animation-fill-mode:forwards;
+	opacity:0;
+	}
+	
+	@keyframes fadeUpAnime{
+	  from {
+		opacity: 0;
+		transform: translateY(100px);
+	  }
+	
+	  to {
+		opacity: 1;
+		transform: translateY(0);
+	  }
+	}
 
-.container{
-	background:#555;
-}
 
-.container p{
-	padding: 300px 0;	
-	text-align: center;
-	color: #fff;
-}
+
+/*==================================================
+ふわっ コンテンツ
+===================================*/
+
+/* その場で */
+.fadeIn{
+	animation-name:fadeInAnime;
+	animation-duration:1s;
+	animation-fill-mode:forwards;
+	opacity:0;
+	}
+	
+	@keyframes fadeInAnime{
+	  from {
+		opacity: 0;
+	  }
+	
+	  to {
+		opacity: 1;
+	  }
+	}
+	
+	/* 下から */
+	
+	.fadeUp{
+	animation-name:fadeUpAnime;
+	animation-duration:3s;
+	animation-fill-mode:forwards;
+	opacity:0;
+	}
+	
+	@keyframes fadeUpAnime{
+	  from {
+		opacity: 0;
+		transform: translateY(100px);
+	  }
+	
+	  to {
+		opacity: 1;
+		transform: translateY(0);
+	  }
+	}
+	
+	/* 上から */
+	
+	.fadeDown{
+	animation-name:fadeDownAnime;
+	animation-duration:0.5s;
+	animation-fill-mode:forwards;
+	opacity:0;
+	}
+	
+	@keyframes fadeDownAnime{
+	  from {
+		opacity: 0;
+		transform: translateY(-100px);
+	  }
+	
+	  to {
+		opacity: 1;
+		transform: translateY(0);
+	  }
+	}
+	
+	/* 左から */
+	
+	.fadeLeft{
+	animation-name:fadeLeftAnime;
+	animation-duration:0.5s;
+	animation-fill-mode:forwards;
+	opacity:0;
+	}
+	
+	@keyframes fadeLeftAnime{
+	  from {
+		opacity: 0;
+		transform: translateX(-100px);
+	  }
+	
+	  to {
+		opacity: 1;
+		transform: translateX(0);
+	  }
+	}
+	
+	/* 右から */
+	
+	.fadeRight{
+	animation-name:fadeRightAnime;
+	animation-duration:0.5s;
+	animation-fill-mode:forwards;
+	opacity:0;
+	}
+	
+	@keyframes fadeRightAnime{
+	  from {
+		opacity: 0;
+		transform: translateX(100px);
+	  }
+	
+	  to {
+		opacity: 1;
+		transform: translateX(0);
+	  }
+	}
+
+
+/*==================================================
+じわっ
+===================================*/
+
+/* ぼかしから出現 */
+.blur{
+	animation-name:blurAnime;
+	animation-duration:1s;
+	animation-fill-mode:forwards;
+  }
+  
+  @keyframes blurAnime{
+	from {
+	filter: blur(10px);
+	transform: scale(1.02);
+	opacity: 0;
+	}
+  
+	to {
+	filter: blur(0);
+	transform: scale(1);
+	opacity: 1;
+	}
+  }
+  
+  /* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+   
+  .blurTrigger{
+	  opacity: 0;
+  }
