@@ -119,6 +119,7 @@ h2 {
     color: #fff;
     -webkit-text-stroke: 1px #000;
     line-height: 80px;
+    z-index: 10;
 }
 
 .top_lead2 {
@@ -140,6 +141,8 @@ h2 {
 .v_container {
     display: flex;
     justify-content: center;
+    padding-bottom: 30px;
+    position: relative;
 
     h2 {
         -ms-writing-mode: tb-rl;
@@ -147,16 +150,17 @@ h2 {
         text-orientation: sideways;
         position: relative;
         padding: 20px;
+        margin-top: 60px;
     }
     h2::after {
         content: '';
         position: absolute;
         left: 0;
         right: 0;
-        bottom: -80px;
+        bottom: 120px;
         width: 1px;
         height: 200px;
-        margin: auto;
+        margin: 0 auto;
         background-color: #000;
     }
 
@@ -170,8 +174,122 @@ h2 {
             line-height: 50px;
             font-size: 25px;
         }
+        p {
+            font-family: dnp-shuei-mgothic-std, sans-serif;
+            padding-top: 50px;
+            font-size: 16px;
+            line-height: 40px;
+            max-width: 800px;
+        }
+    }
+
+    .v-box {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 340px;
+        max-width: 1100px;
+        z-index: -1;
+        background-color: #D8CDC1;
+        bottom: 0;
     }
 }
+
+/*矢印が右に移動して背景がつく*/
+
+.btn{
+    /*アニメーションの起点とするためrelativeを指定*/
+    position: relative;
+	overflow: hidden;
+    /*ボタンの形状*/
+    float: right;
+    margin: 30px 0;
+	text-decoration: none;
+	display: inline-block;
+   	border: 1px solid #13274B;/* ボーダーの色と太さ */
+    padding: 15px 100px;
+    text-align: center;
+    outline: none;
+    letter-spacing: 2px;
+    font-size: 13px;
+    /*アニメーションの指定*/   
+    transition: ease .2s;
+}
+
+/*ボタン内spanの形状*/
+.btn span {
+	position: relative;
+	z-index: 3;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
+	color:#13274B;
+}
+
+.btn:hover span{
+	color:#fff;
+    border: none;
+}
+
+/*== 背景が流れる（斜め） */
+.bgskew::before {
+	content: '';
+    /*絶対配置で位置を指定*/
+	position: absolute;
+	top: 0;
+	left: -130%;
+    /*色や形状*/
+	background: #13274B;
+	width:120%;
+	height: 100%;
+	transform: skewX(-25deg);
+}
+
+/*hoverした時のアニメーション*/
+.bgskew:hover::before {
+	animation: skewanime .5s forwards;/*アニメーションの名前と速度を定義*/
+}
+
+@keyframes skewanime {
+	100% {
+		left:-10%;/*画面の見えていない左から右へ移動する終了地点*/
+	}
+}
+
+
+// .v-btn {
+//     float: right;
+//     border: #13274B 1px solid;
+//     margin: 30px 0;
+    
+//     a {
+//         display: block;
+//         padding: 15px 100px;
+//         position: relative;
+//         letter-spacing: 2px;
+//         font-size: 13px;
+//         img {
+//             position: absolute;
+//             bottom: 20%;
+//             right: 10px;
+//             color: #13274B;
+//         }
+//     }
+    
+// }
+
+article {
+    height: 500px;
+    background-color: #13274B;
+    img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+    }
+}
+
+#center {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 
 
 
