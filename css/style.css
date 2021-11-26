@@ -310,6 +310,15 @@ section {
   right: 5%;
 }
 
+@media (max-width: 767px) {
+  .vertical::after {
+    display: none;
+  }
+  .vertical {
+    text-align: center;
+  }
+}
+
 section {
   padding: 50px 10px;
 }
@@ -349,10 +358,6 @@ article img {
   font-size: 16px;
   line-height: 40px;
   max-width: 600px;
-}
-
-#SERVIS {
-  background-color: #fff;
 }
 
 #s-contents {
@@ -490,7 +495,6 @@ article img {
 
 #WORKS {
   padding: 50px 10px;
-  background-color: #fff;
 }
 
 .w-img {
@@ -521,7 +525,6 @@ article img {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  background-color: #fff;
 }
 
 .separate #CONPANY {
@@ -633,6 +636,15 @@ article img {
   padding: 50px 10px;
 }
 
+#CONTACT .contact_text {
+  color: #fff;
+  margin-top: 30px;
+}
+
+#CONTACT h2 {
+  margin-top: 30px;
+}
+
 .form-btn {
   /*アニメーションの起点とするためrelativeを指定*/
   position: relative;
@@ -711,5 +723,91 @@ article img {
   font-size: 15px;
   color: #F4AB90;
   right: 5%;
+}
+
+.contact {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact li {
+  font-size: 20px;
+  display: block;
+  font-family: 'Mukta Vaani', sans-serif;
+  font-weight: 700;
+}
+
+.contact .tel {
+  margin: 50px 0 30px 0;
+  position: relative;
+}
+
+.contact .mail {
+  margin: 0 0 6vh 0;
+  position: relative;
+}
+
+.tel::before {
+  position: absolute;
+  left: -20%;
+  font-family: 'Material Icons';
+  content: '\e5c8';
+  font-size: 15px;
+  color: #13274B;
+}
+
+.mail::before {
+  position: absolute;
+  left: -20%;
+  font-family: 'Material Icons';
+  content: '\e5c8';
+  font-size: 15px;
+  color: #13274B;
+}
+
+#FLOW {
+  text-align: center;
+  padding: 50px 0;
+}
+
+#FLOW .sns-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#FLOW .sns-link li {
+  width: 20px;
+  color: #13274B;
+}
+
+#FLOW .sns-link img {
+  color: #13274B;
+}
+
+.sns-link li {
+  display: inline-block;
+  margin: 50px 20px;
+}
+
+.sns-link li img {
+  width: 30px;
+}
+
+.footer-contents {
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

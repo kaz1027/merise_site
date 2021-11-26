@@ -132,6 +132,7 @@ h2 {
     color: #EAE7E7;
 }
 
+
 section {
     padding: 50px 10px;
 }
@@ -305,6 +306,15 @@ section {
     
 // }
 
+@media (max-width: 767px) {
+    .vertical::after {
+        display: none;
+    }
+    .vertical {
+        text-align: center;
+    }
+}
+
 section {
     padding: 50px 10px;
 }
@@ -344,9 +354,9 @@ article {
     max-width: 600px
 }
 
-#SERVIS {
-    background-color: #fff;
-}
+// #SERVIS {
+//     background-color: #fff;
+// }
 
 #s-contents {
     display: flex;
@@ -469,7 +479,7 @@ article {
 
 #WORKS {
     padding: 50px 10px;
-    background-color: #fff;
+    // fff
 }
 
 .w-img {
@@ -490,7 +500,7 @@ article {
 .separate {
     display: flex;
     width: 100%;
-    background-color: #fff;
+    // background-color: #fff;
     #CONPANY {
         width: 50%;
         padding: 50px 10px;
@@ -592,7 +602,17 @@ article {
     background-color: #F4AB90;
     width: 100%;
     padding: 50px 10px;
+    .contact_text {
+        color: #fff;
+        margin-top: 30px;
+    }
+
+    h2 {
+        margin-top: 30px;
+    }
 }
+
+
 
 .form-btn{
     /*アニメーションの起点とするためrelativeを指定*/
@@ -666,4 +686,75 @@ article {
     font-size: 15px;
     color: #F4AB90;
     right: 5%;
+}
+
+
+.contact{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    li {
+        font-size: 20px;
+        display: block;
+        font-family: 'Mukta Vaani', sans-serif;
+        font-weight: 700;
+    }
+    .tel {
+        margin: 50px 0 30px 0;
+        position: relative;
+    }
+    .mail{
+        margin:0 0 6vh 0;
+        position: relative;
+    }
+}
+
+.tel::before {
+    position: absolute;
+    left: -20%;
+    font-family: 'Material Icons';
+    content: '\e5c8';
+    font-size: 15px;
+    color: #13274B;
+}
+
+.mail::before {
+    position: absolute;
+    left: -20%;
+    font-family: 'Material Icons';
+    content: '\e5c8';
+    font-size: 15px;
+    color: #13274B;
+}
+
+#FLOW {
+    text-align: center;
+    padding: 50px 0;
+    .sns-link {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        li {
+            width: 20px;
+            color: #13274B;
+        }
+        img {
+            color: #13274B;
+        }
+    }
+}
+
+
+.sns-link li{
+    display: inline-block;
+    margin: 50px 20px;
+}
+
+.sns-link li img{
+    width:30px;
+}
+
+.footer-contents {
+    text-align: center;
 }
