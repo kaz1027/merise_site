@@ -1,0 +1,205 @@
+
+#v-container {
+    margin: 160px auto 0 auto;
+    padding: 0 10px;
+    max-width: 1000px;
+    position: relative;
+}
+
+
+
+.v_lead {
+    font-size: 25px;
+    font-weight: 800;
+    color: #fff;
+    -webkit-text-stroke: 1px #000;
+    line-height: 80px;
+    margin: 100px 0 50px 0;
+}
+
+.v_toptext {
+    max-width: 600px;
+    margin-bottom: 100px;
+    line-height: 40px;
+    font-family: dnp-shuei-mgothic-std, sans-serif;
+    font-size: 16px;
+}
+
+@media (max-width: 767px) { /* スマホ */
+    .v_lead {
+        font-size: 20px;
+        margin: 10px 0 30px 0;
+    }
+    .v_toptext {
+        margin-bottom: 50px;
+        line-height: 30px;
+        font-size: 13px;
+    }
+    .v-top-img1 {
+        display: none;
+    }
+    .v-top-img2 {
+        display: flex;
+        align-items: center;
+        align-items: center;
+        margin-bottom: 50px;
+        img {
+            margin: 0 auto;
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+            box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+        }
+    }
+}
+
+
+@media (min-width: 767px) { /* PC */
+    .v-top-img1 {
+        position: absolute;
+        right: 15%;
+        bottom: 0;
+        z-index: -2;
+        img {
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+            box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+        }
+    }
+    
+    .v-top-img2 {
+        position: absolute;
+        right: -10%;
+        bottom: 10%;
+        z-index: -1;
+        img {
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+            box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+        }
+    }
+}
+
+section {
+    padding: 100px 10px;
+}
+
+.v-section1 {
+    background-color: #fff;
+}
+
+.left_icon-ver {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    .v-icon {
+        width: 40%;
+        img {
+            width: 500px;
+        }
+    }
+    .v-explain {
+        margin: 20px;
+        width: 60%;
+        letter-spacing: 2px;
+        .v-explain-title {
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            border-bottom: solid px;
+        }
+        .v-explain-text {
+            line-height: 30px;
+            font-family: dnp-shuei-mgothic-std, sans-serif;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .left_icon-ver {
+        display:flex;
+        flex-direction: column;
+        margin: 20px 0;
+        .v-icon {
+            order:2;
+            width: 100%;
+            margin: 0 auto;
+            img {
+                width: 300px;
+                margin: 0 auto;
+            }
+            // display: none;
+        }
+        .v-explain {
+            order:1;
+            width: 90%;
+            margin: 0 10px 30px 10px;
+        }
+    }
+}
+
+.right_icon-ver {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    .v-icon {
+        width: 40%;
+        img {
+            width: 500px;
+        }
+    }
+    .v-explain {
+        margin: 20px;
+        width: 60%;
+        letter-spacing: 2px;
+        .v-explain-title {
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            border-bottom: solid px;
+        }
+        .v-explain-text {
+            line-height: 30px;
+            font-family: dnp-shuei-mgothic-std, sans-serif;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .right_icon-ver {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto;
+        .v-icon {
+            order:2;
+            width: 80%;
+            margin: 0 auto;
+            img {
+                width: 300px;
+                margin: 0 auto;
+            }
+            // display: none;
+        }
+        .v-explain {
+            order:1;
+            width: 90%;
+            margin: 0 10px 30px 10px;
+        }
+    }
+}
+
+.v-explain-title {
+    border-bottom: solid 2px;
+}
+
+
