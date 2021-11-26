@@ -5,6 +5,10 @@ body {
     color: #13274B;
 }
 
+/*===========================================================*/
+/* ヘッダー
+/*===========================================================*/
+
 #h-wrapper {
     position: fixed;
     height: 120px;
@@ -81,6 +85,157 @@ h1 {
     transform: scale(1, 1);/*X方向にスケール拡大*/
 }
 
+/*===========================================================*/
+/* ハンバーガーメニュー
+/*===========================================================*/
+
+#g-nav{
+    /*position:fixed;にし、z-indexの数値を小さくして最背面へ*/
+    position:fixed;
+	z-index: -1;
+	opacity: 0;/*はじめは透過0*/
+    /*ナビの位置と形状*/
+	top:0;
+	width:100%;
+    height: 100vh;/*ナビの高さ*/
+	background:#D8CDC1;
+    /*動き*/
+	transition: all 0.3s;
+}
+
+/*アクティブクラスがついたら透過なしにして最前面へ*/
+#g-nav.panelactive{
+	opacity: 1;
+	z-index:999;
+}
+
+// /*ナビゲーションの縦スクロール*/
+// #g-nav.panelactive #g-nav-list{
+//     /*ナビの数が増えた場合縦スクロール*/
+//     position: fixed;
+//     z-index: 999; 
+//     width: 100%;
+//     height: 100vh;/*表示する高さ*/
+//     overflow: auto;
+//     -webkit-overflow-scrolling: touch;
+// }
+
+/*ナビゲーション*/
+#g-nav ul {
+    display: none;
+    /*ナビゲーション天地中央揃え*/
+    position: absolute;
+    z-index: 999;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+#g-nav.panelactive ul {
+    display: block;
+}
+
+/*リストのレイアウト設定*/
+
+#g-nav li{
+	list-style: none;
+    text-align: center; 
+}
+
+#g-nav li a{
+	color: #13274B;
+	text-decoration: none;
+	padding:10px;
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-weight: bold;
+}
+
+.g-nav-text {
+    line-height: 30px;
+    font-family: 'Mukta Vaani', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 16px;
+}
+
+/*========= ボタンのためのCSS ===============*/
+.openbtn{
+	position:fixed;
+    z-index: 9999;/*ボタンを最前面に*/
+	top:30px;
+	right: 20px;
+	cursor: pointer;
+    width: 70px;
+    height:50px;
+}
+	
+/*×に変化*/	
+.openbtn span{
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+	background-color: #13274B;
+  	width: 45%;
+  }
+
+.openbtn span:nth-of-type(1) {
+	top:15px;	
+}
+
+.openbtn span:nth-of-type(2) {
+	top:23px;
+}
+
+.openbtn span:nth-of-type(3) {
+	top:31px;
+}
+
+.openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+
+@media (min-width: 767px) {
+    #g-nav {
+        display: none;
+    }
+    .openbtn {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    #pc-nav {
+        display: none;
+    }
+    h1 {
+        font-size: 30px;
+    }
+}
+
+
+/*===========================================================*/
+/* トップ画面
+/*===========================================================*/
 
 h2 {
     font-family: Mukta Vaani;
@@ -89,9 +244,6 @@ h2 {
     font-size: 30px;
 }
 
-// main {
-//     padding-top: 120px;
-// }
 
 #top-main {
     height: 100vh;
@@ -123,7 +275,8 @@ h2 {
 .top_lead2 {
     position: absolute;
     bottom: 100px;
-    right: 10%;
+    right: 5px;
+    text-align: right;
     font-family: futura-pt, sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -132,14 +285,26 @@ h2 {
     color: #EAE7E7;
 }
 
+@media (max-width: 767px) {
+    .top_lead {
+        font-size: 30px;
+    }
+    .top_lead2 {
+        font-size: 70px;
+        text-align: right;
+    }
+}
+
+/*===========================================================*/
+/* ヴィジョン
+/*===========================================================*/
 
 section {
     padding: 50px 10px;
 }
 
 #VISION {
-    padding: 50px;
-    // background-color: #fff;
+    padding: 90px 10px;
 
 }
 .v_container {
@@ -180,6 +345,7 @@ section {
             margin: 30px;
             line-height: 50px;
             font-size: 25px;
+            white-space: nowrap;
         }
         p {
             font-family: dnp-shuei-mgothic-std, sans-serif;
@@ -284,40 +450,43 @@ section {
     right: 5%;
     
 }
+@media (min-width: 767px) {
+    .v-title,
+    .v-subtitle {
+        display: none;
+    }
+}
 
-// .v-btn {
-//     float: right;
-//     border: #13274B 1px solid;
-//     margin: 30px 0;
-    
-//     a {
-//         display: block;
-//         padding: 15px 100px;
-//         position: relative;
-//         letter-spacing: 2px;
-//         font-size: 13px;
-//         img {
-//             position: absolute;
-//             bottom: 20%;
-//             right: 10px;
-//             color: #13274B;
-//         }
-//     }
-    
-// }
 
 @media (max-width: 767px) {
+    #VISION {
+        background-color: #D8CDC1;
+    }
     .vertical::after {
         display: none;
     }
     .vertical {
+        display: none;
+    }
+    .v-btn {
         text-align: center;
+    }
+    .v-box {
+        display: none;
+    }
+    .v-title {
+        text-align: center;
+    }
+    .v-subtitle {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 12px;
+    }
+    h3 {
+        font-size: 20px;
     }
 }
 
-section {
-    padding: 50px 10px;
-}
 
 article {
     height: 500px;
@@ -328,6 +497,10 @@ article {
         object-fit: cover;
     }
 }
+
+/*===========================================================*/
+/* ヴィジョン
+/*===========================================================*/
 
 .c-wrapper {
     max-width: 1200px;
@@ -345,7 +518,7 @@ article {
     font-size: 12px;
 }
 
-.text {
+.s-text {
     margin: 0 auto;
     font-family: dnp-shuei-mgothic-std, sans-serif;
     padding: 50px 10px;
@@ -354,8 +527,16 @@ article {
     max-width: 600px
 }
 
+@media (max-width: 767px) {
+    .s-text {
+        line-height: 35px;
+        font-size: 14px;
+        padding: 50px 25px;
+    }
+}
+
 // #SERVIS {
-//     background-color: #fff;
+//     padding: 50px 10px;
 // }
 
 #s-contents {
@@ -513,6 +694,25 @@ article {
         background-color: #13274B;
         text-align: center;
         color: #D8CDC1;
+    }
+}
+
+@media (max-width: 767px) {
+    .separate {
+        display: block;
+        #CONPANY {
+            width: 100%;
+            padding: 50px 10px;
+            background-color: #D8CDC1;
+            text-align: center;
+        }
+        #RICRUT {
+            width: 100%;
+            padding: 50px 10px;
+            background-color: #13274B;
+            text-align: center;
+            color: #D8CDC1;
+        }
     }
 }
 
@@ -712,10 +912,10 @@ article {
 
 .tel::before {
     position: absolute;
-    left: -20%;
+    left: 10px;
     font-family: 'Material Icons';
-    content: '\e5c8';
-    font-size: 15px;
+    content: '\e0b0';
+    font-size: 25px;
     color: #13274B;
 }
 
@@ -723,9 +923,25 @@ article {
     position: absolute;
     left: -20%;
     font-family: 'Material Icons';
-    content: '\e5c8';
-    font-size: 15px;
+    content: '\e0be';
+    font-size: 25px;
     color: #13274B;
+}
+
+.tel:hover {
+    color: #fff;
+}
+
+.mail:hover {
+    color: #fff;
+}
+
+.tel::before:hover {
+    color: #F4AB90;
+}
+
+.mail::before:hover {
+    color: #F4AB90;
 }
 
 #FLOW {
@@ -758,3 +974,10 @@ article {
 .footer-contents {
     text-align: center;
 }
+
+
+// @media (min-width: 767px) {
+//     .btn_text {
+//         font-size: 10px;
+//     }
+// }
