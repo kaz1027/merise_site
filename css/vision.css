@@ -168,6 +168,17 @@ section {
     width: 90%;
     margin: 0 10px 30px 10px;
   }
+  .left_icon-ver .v-explain .v-explain-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    border-bottom: solid px;
+  }
+  .left_icon-ver .v-explain .v-explain-text {
+    font-family: dnp-shuei-mgothic-std, sans-serif;
+    line-height: 30px;
+    font-size: 13px;
+  }
 }
 
 .right_icon-ver {
@@ -245,6 +256,17 @@ section {
             order: 1;
     width: 90%;
     margin: 0 10px 30px 10px;
+  }
+  .right_icon-ver .v-explain .v-explain-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    border-bottom: solid px;
+  }
+  .right_icon-ver .v-explain .v-explain-text {
+    font-family: dnp-shuei-mgothic-std, sans-serif;
+    line-height: 30px;
+    font-size: 13px;
   }
 }
 
