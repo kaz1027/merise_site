@@ -8,14 +8,34 @@
 }
 
 /*==================================================
-ふわっ
+ふわっ 読み込まれてすぐ
 ===================================*/
 /* その場で */
-.fadeInTop {
+.fadeInTop3 {
   -webkit-animation-name: fadeInAnime;
           animation-name: fadeInAnime;
   -webkit-animation-duration: 3s;
           animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.fadeInTop2 {
+  -webkit-animation-name: fadeInAnime;
+          animation-name: fadeInAnime;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.fadeInTop {
+  -webkit-animation-name: fadeInAnime;
+          animation-name: fadeInAnime;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   opacity: 0;
@@ -40,7 +60,7 @@
 }
 
 /* 上から */
-.fadeDown {
+.fadeDownTop {
   -webkit-animation-name: fadeDownAnime;
           animation-name: fadeDownAnime;
   -webkit-animation-duration: 0.5s;
@@ -77,11 +97,41 @@
 }
 
 /* 左から */
-.fadeLeft {
+.fadeLeftTop4 {
   -webkit-animation-name: fadeLeftAnime;
           animation-name: fadeLeftAnime;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.fadeLeftTop3 {
+  -webkit-animation-name: fadeLeftAnime;
+          animation-name: fadeLeftAnime;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.fadeLeftTop2 {
+  -webkit-animation-name: fadeLeftAnime;
+          animation-name: fadeLeftAnime;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.fadeLeftTop1 {
+  -webkit-animation-name: fadeLeftAnime;
+          animation-name: fadeLeftAnime;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   opacity: 0;
@@ -114,11 +164,41 @@
 }
 
 /* 右から */
-.fadeRightTop {
+.fadeRightTop1 {
+  -webkit-animation-name: fadeRightAnime;
+          animation-name: fadeRightAnime;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.fadeRightTop2 {
+  -webkit-animation-name: fadeRightAnime;
+          animation-name: fadeRightAnime;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.fadeRightTop3 {
   -webkit-animation-name: fadeRightAnime;
           animation-name: fadeRightAnime;
   -webkit-animation-duration: 3s;
           animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.fadeRightTop4 {
+  -webkit-animation-name: fadeRightAnime;
+          animation-name: fadeRightAnime;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   opacity: 0;
@@ -151,7 +231,37 @@
 }
 
 /* 下から */
-.fadeUpTop {
+.fadeUpTop1 {
+  -webkit-animation-name: fadeUpAnime;
+          animation-name: fadeUpAnime;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.fadeUpTop2 {
+  -webkit-animation-name: fadeUpAnime;
+          animation-name: fadeUpAnime;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.fadeUpTop3 {
+  -webkit-animation-name: fadeUpAnime;
+          animation-name: fadeUpAnime;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.fadeUpTop4 {
   -webkit-animation-name: fadeUpAnime;
           animation-name: fadeUpAnime;
   -webkit-animation-duration: 4s;
@@ -269,6 +379,26 @@
   opacity: 0;
 }
 
+.fadeLeft1 {
+  -webkit-animation-name: fadeLeftAnime;
+          animation-name: fadeLeftAnime;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.fadeLeft2 {
+  -webkit-animation-name: fadeLeftAnime;
+          animation-name: fadeLeftAnime;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
 @keyframes fadeLeftAnime {
   from {
     opacity: 0;
@@ -288,6 +418,26 @@
           animation-name: fadeRightAnime;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.fadeRight1 {
+  -webkit-animation-name: fadeRightAnime;
+          animation-name: fadeRightAnime;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.fadeRight2 {
+  -webkit-animation-name: fadeRightAnime;
+          animation-name: fadeRightAnime;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   opacity: 0;
