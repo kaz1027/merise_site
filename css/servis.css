@@ -38,14 +38,13 @@
 
 .back_text {
   position: absolute;
-  font-family: 'Mukta Vaani', sans-serif;
-  font-weight: 900;
   font-size: 150px;
   letter-spacing: 3px;
   color: #fff;
   bottom: 40%;
   left: -3%;
   z-index: -100;
+  font-family: 'futura-pt';
 }
 
 .s-top-img1 {
@@ -125,6 +124,9 @@
   }
 }
 
+/*===========================================================*/
+/* 右に写真バージョン
+/*===========================================================*/
 .s-section1 {
   background-color: #fff;
 }
@@ -141,6 +143,16 @@
 .right-img-ver .s-left-contents {
   width: 60%;
   padding: 50px 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
 }
 
@@ -166,5 +178,333 @@
 
 .right-img-ver .s-right-img img {
   height: 100%;
+}
+
+.right-img-ver .s-contents-price {
+  margin-top: 30px;
+  font-family: 'futura-pt';
+  font-weight: 700;
+  font-size: 30px;
+}
+
+@media (max-width: 767px) {
+  /* スマホ */
+  .right-img-ver {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: auto;
+  }
+  .right-img-ver .s-left-contents {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 100%;
+    padding: 50px 30px;
+    height: 500px;
+  }
+  .right-img-ver .s-left-contents .s-contents-title {
+    font-size: 20px;
+  }
+  .right-img-ver .s-left-contents .s-contents-text {
+    line-height: 30px;
+    font-family: dnp-shuei-mgothic-std, sans-serif;
+    font-size: 16px;
+    border-bottom: solid 2px;
+    padding: 30px 0;
+  }
+  .right-img-ver .s-right-img {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    height: 400px;
+  }
+}
+
+/*===========================================================*/
+/* 左に写真バージョン
+/*===========================================================*/
+.s-section2 {
+  background-color: #fff;
+}
+
+.left-img-ver {
+  overflow: hidden;
+  width: 100%;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.left-img-ver .s-right-contents {
+  width: 60%;
+  padding: 50px 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.left-img-ver .s-right-contents .s-RightContents-title {
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin: 10px 0;
+}
+
+.left-img-ver .s-right-contents .s-RightContents-text {
+  line-height: 30px;
+  font-family: dnp-shuei-mgothic-std, sans-serif;
+  font-size: 16px;
+  border-bottom: solid 2px;
+  padding: 30px 0;
+}
+
+.left-img-ver .s-right-contents .s-contents-price {
+  margin-top: 30px;
+  font-family: 'futura-pt';
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.left-img-ver .s-left-img {
+  width: 40%;
+  height: 100%;
+}
+
+.left-img-ver .s-left-img img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 767px) {
+  /* スマホ */
+  .left-img-ver {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: auto;
+  }
+  .left-img-ver .s-right-contents {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 100%;
+    padding: 50px 30px;
+    height: 500px;
+  }
+  .left-img-ver .s-right-contents .s-contents-title {
+    font-size: 20px;
+  }
+  .left-img-ver .s-right-contents .s-contents-text {
+    line-height: 30px;
+    font-family: dnp-shuei-mgothic-std, sans-serif;
+    font-size: 16px;
+    border-bottom: solid 2px;
+    padding: 30px 0;
+  }
+  .left-img-ver .s-left-img {
+    width: 100%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .left-img-ver .s-left-img img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+/*==================================================
+機能編 　9-1-5 スクロールをするとエリアの高さに合わせて線が伸びる
+===================================*/
+/*========= バー表示のためのCSS ===============*/
+/*タイムライン全体の設定*/
+.timeline {
+  max-width: 600px;
+  width: 100%;
+  margin: 50px auto;
+  padding: 0 30px;
+}
+
+.timeline li {
+  /*線の起点とするためrelativeを設定*/
+  position: relative;
+  list-style: none;
+  padding: 0 0 20px 0;
+}
+
+.timeline dl {
+  margin: 0 0 20px 3em;
+}
+
+.timeline dd strong {
+  display: block;
+  padding: 10px 0;
+}
+
+/*絶対配置で線を設定*/
+.border-line {
+  /*線の位置*/
+  position: absolute;
+  left: 0.2em;
+  top: 10%;
+  width: 2px;
+  /*線の太さ*/
+  height: 0;
+  /*はじめは高さを0に*/
+  background: #ccc;
+}
+
+/*タイムラインの見出し横の丸の位置と形状*/
+.timeline li::after {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background: #666;
+  border-radius: 50%;
+}
+
+#FLOW {
+  margin: 50px auto;
+  max-width: 500px;
+}
+
+.flow-contents1 {
+  padding-bottom: 20px;
+}
+
+.flow-contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: solid 2px;
+  padding-bottom: 10px;
+  margin-top: 50px;
+}
+
+.flow-contents .flow-num {
+  border: solid 1px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  line-height: 60px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.flow-contents .flow-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-weight: bold;
+}
+
+.flow-icon1::after {
+  font-family: 'Material Icons';
+  content: '\f187';
+  font-size: 80px;
+  color: #000;
+}
+
+.flow-icon2 {
+  color: #000;
+}
+
+.flow-icon2 img {
+  width: 80px;
+}
+
+.f-formBtn {
+  margin: 30px 0 0 0;
+  position: relative;
+}
+
+.f-formBtn .f-formBtn-a {
+  border: solid 1px black;
+  padding: 15px 50px;
+  background-color: black;
+  color: #fff;
+  font-size: 13px;
+}
+
+.f-formBtn .f-formBtn-a::after {
+  position: absolute;
+  right: 5%;
+  font-family: 'Material Icons';
+  content: '\e5c8';
+  font-size: 15px;
+  color: #fff;
+  top: 15%;
+}
+
+.f-formBtn .f-formBtn-a:hover {
+  background-color: #F5F4F1;
+  color: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.f-formBtn .f-formBtn-a:hover::after {
+  position: absolute;
+  right: 5%;
+  font-family: 'Material Icons';
+  content: '\e5c8';
+  font-size: 15px;
+  color: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  top: 15%;
+}
+
+@media (max-width: 481px) {
+  #flow {
+    padding: 0 50px;
+  }
+  dd {
+    display: none;
+  }
 }
 /*# sourceMappingURL=servis.css.map */

@@ -33,14 +33,13 @@
 
 .back_text {
     position: absolute;
-    font-family: 'Mukta Vaani', sans-serif;
-    font-weight: 900;
     font-size: 150px;
     letter-spacing: 3px;
     color: #fff;
     bottom: 40%;
     left: -3%;
     z-index: -100;
+    font-family: 'futura-pt';
 }
 
 
@@ -112,6 +111,11 @@
     }
 }
 
+
+/*===========================================================*/
+/* 右に写真バージョン
+/*===========================================================*/
+
 .s-section1 {
     background-color: #fff;
 }
@@ -124,6 +128,9 @@
     .s-left-contents {
         width: 60%;
         padding: 50px 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
         .s-contents-title {
             font-size: 25px;
@@ -146,7 +153,293 @@
             height: 100%;
         }
     }
+    .s-contents-price {
+        margin-top: 30px;
+        font-family: 'futura-pt';
+        font-weight: 700;
+        font-size: 30px;
+    }
 }
+
+@media (max-width: 767px) { /* スマホ */
+    .right-img-ver {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: auto;
+        .s-left-contents {
+            order:2;
+            width: 100%;
+            padding: 50px 30px;
+            height: 500px;
+            .s-contents-title {
+                font-size: 20px;
+            }
+            .s-contents-text {
+                line-height: 30px;
+                font-family: dnp-shuei-mgothic-std, sans-serif;
+                font-size: 16px;
+                border-bottom: solid 2px;
+                padding: 30px 0;
+            }
+        }
+        .s-right-img {
+            order: 1;
+            height: 400px;
+        }
+    }
+}
+
+/*===========================================================*/
+/* 左に写真バージョン
+/*===========================================================*/
+
+.s-section2 {
+    background-color: #fff;
+}
+
+.left-img-ver {
+    overflow: hidden;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    .s-right-contents {
+        width: 60%;
+        padding: 50px 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: #fff;
+        z-index: 1;
+        .s-RightContents-title {
+            font-size: 25px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin: 10px 0;
+        }
+        .s-RightContents-text {
+            line-height: 30px;
+            font-family: dnp-shuei-mgothic-std, sans-serif;
+            font-size: 16px;
+            border-bottom: solid 2px;
+            padding: 30px 0;
+        }
+        .s-contents-price {
+            margin-top: 30px;
+            font-family: 'futura-pt';
+            font-weight: 700;
+            font-size: 30px;
+        }
+    }
+    .s-left-img {
+        width: 40%;
+        height: 100%;
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+@media (max-width: 767px) { /* スマホ */
+    .left-img-ver {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: auto;
+        .s-right-contents {
+            order: 2;
+            width: 100%;
+            padding: 50px 30px;
+            height: 500px;
+            .s-contents-title {
+                font-size: 20px;
+            }
+            .s-contents-text {
+                line-height: 30px;
+                font-family: dnp-shuei-mgothic-std, sans-serif;
+                font-size: 16px;
+                border-bottom: solid 2px;
+                padding: 30px 0;
+            }
+        }
+        .s-left-img {
+            width: 100%;
+            order: 1;
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+
+/*==================================================
+機能編 　9-1-5 スクロールをするとエリアの高さに合わせて線が伸びる
+===================================*/
+
+/*========= バー表示のためのCSS ===============*/
+
+/*タイムライン全体の設定*/
+.timeline{
+	max-width: 600px;
+	width:100%;
+	margin:50px auto;
+	padding:0 30px;
+}
+
+.timeline li{
+    /*線の起点とするためrelativeを設定*/
+    position: relative;
+	list-style: none;
+	padding:0 0 20px 0;
+}
+
+.timeline dl{
+	margin:0 0 20px 3em;
+}
+
+.timeline dd strong{
+	display: block;
+	padding:10px 0;
+}
+
+/*絶対配置で線を設定*/
+.border-line {
+    /*線の位置*/
+	position: absolute;
+	left:0.2em;
+	top:10%;
+	width:2px;/*線の太さ*/
+	height:0;/*はじめは高さを0に*/
+	background: #ccc;
+}
+
+/*タイムラインの見出し横の丸の位置と形状*/
+.timeline li::after{
+	content:'';
+	position: absolute;
+	top:10%;
+	left:0;
+	width:10px;
+	height: 10px;
+	background:#666;
+	border-radius: 50%;
+}
+#FLOW {
+    margin: 50px auto;
+    max-width: 500px;
+}
+
+// .flow {
+//     margin-top: 50px;
+// }
+
+.flow-contents1 {
+    padding-bottom: 20px;
+}
+
+.flow-contents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 2px;
+    padding-bottom: 10px;
+    margin-top: 50px;
+    
+    // max-width: 500px;
+    .flow-num {
+        border: solid 1px;
+        height:60px;
+        width:60px;
+        border-radius:50%;
+        line-height:60px;
+        text-align:center;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .flow-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-weight: bold;
+    }
+}
+
+.flow-icon1::after {
+    font-family: 'Material Icons';
+    content: '\f187';
+    font-size: 80px;
+    color: #000;
+}
+
+.flow-icon2 {
+    // font-family: 'Material Icons';
+    // content: '\f187';
+    img {
+        width: 80px;
+    }
+    color: #000;
+}
+
+.f-formBtn {
+    margin: 30px 0 0 0;
+    position: relative;
+    .f-formBtn-a {
+        border: solid 1px black;
+        padding: 15px 50px;
+        background-color: black;
+        color: #fff;
+        font-size: 13px;
+    }
+    .f-formBtn-a::after {
+        position: absolute;
+        right: 5%;
+        font-family: 'Material Icons';
+        content: '\e5c8';
+        font-size: 15px;
+        color: #fff;
+        top: 15%;
+    }
+
+    .f-formBtn-a:hover {
+        background-color: #F5F4F1;
+        color: black;
+        transition: 0.5s;
+    }
+    .f-formBtn-a:hover::after {
+        position: absolute;
+        right: 5%;
+        font-family: 'Material Icons';
+        content: '\e5c8';
+        font-size: 15px;
+        color: black;
+        transition: 0.5s;
+        top: 15%;
+    }
+}
+
+@media (max-width: 481px) {
+
+    #flow {
+        padding: 0 50px;
+    }
+    dd {
+        display: none;
+    }
+
+
+}
+
+
+
+
+
+
+
 
 
 

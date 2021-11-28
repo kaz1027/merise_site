@@ -311,6 +311,13 @@
 	animation-fill-mode:forwards;
 	opacity:0;
 	}
+
+	.fadeRight3{
+		animation-name:fadeRightAnime;
+		animation-duration:3s;
+		animation-fill-mode:forwards;
+		opacity:0;
+	}
 	
 	@keyframes fadeRightAnime{
 	  from {
@@ -355,3 +362,4 @@
   .blurTrigger{
     opacity: 0;
   }
+
