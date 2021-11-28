@@ -33,14 +33,13 @@
 
 .back_text {
     position: absolute;
-    font-family: 'Mukta Vaani', sans-serif;
-    font-weight: 900;
     font-size: 150px;
     letter-spacing: 3px;
     color: #fff;
     bottom: 40%;
     left: -3%;
     z-index: -100;
+    font-family: 'futura-pt';
 }
 
 
@@ -112,6 +111,11 @@
     }
 }
 
+
+/*===========================================================*/
+/* 右に写真バージョン
+/*===========================================================*/
+
 .s-section1 {
     background-color: #fff;
 }
@@ -124,6 +128,9 @@
     .s-left-contents {
         width: 60%;
         padding: 50px 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
         .s-contents-title {
             font-size: 25px;
@@ -146,7 +153,134 @@
             height: 100%;
         }
     }
+    .s-contents-price {
+        margin-top: 30px;
+        font-family: 'futura-pt';
+        font-weight: 700;
+        font-size: 30px;
+    }
 }
+
+@media (max-width: 767px) { /* スマホ */
+    .right-img-ver {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: auto;
+        .s-left-contents {
+            order:2;
+            width: 100%;
+            padding: 50px 30px;
+            height: 500px;
+            .s-contents-title {
+                font-size: 20px;
+            }
+            .s-contents-text {
+                line-height: 30px;
+                font-family: dnp-shuei-mgothic-std, sans-serif;
+                font-size: 16px;
+                border-bottom: solid 2px;
+                padding: 30px 0;
+            }
+        }
+        .s-right-img {
+            order: 1;
+            height: 500px;
+        }
+    }
+}
+
+/*===========================================================*/
+/* 左に写真バージョン
+/*===========================================================*/
+
+.s-section2 {
+    background-color: #fff;
+}
+
+.left-img-ver {
+    overflow: hidden;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    .s-right-contents {
+        width: 60%;
+        padding: 50px 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: #fff;
+        z-index: 1;
+        .s-RightContents-title {
+            font-size: 25px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin: 10px 0;
+        }
+        .s-RightContents-text {
+            line-height: 30px;
+            font-family: dnp-shuei-mgothic-std, sans-serif;
+            font-size: 16px;
+            border-bottom: solid 2px;
+            padding: 30px 0;
+        }
+        .s-contents-price {
+            margin-top: 30px;
+            font-family: 'futura-pt';
+            font-weight: 700;
+            font-size: 30px;
+        }
+    }
+    .s-left-img {
+        width: 40%;
+        height: 100%;
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+@media (max-width: 767px) { /* スマホ */
+    .left-img-ver {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: auto;
+        .s-right-contents {
+            order: 2;
+            width: 100%;
+            padding: 50px 30px;
+            height: 500px;
+            .s-contents-title {
+                font-size: 20px;
+            }
+            .s-contents-text {
+                line-height: 30px;
+                font-family: dnp-shuei-mgothic-std, sans-serif;
+                font-size: 16px;
+                border-bottom: solid 2px;
+                padding: 30px 0;
+            }
+        }
+        .s-left-img {
+            width: 100%;
+            order: 1;
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
 
 
 
