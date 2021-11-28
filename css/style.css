@@ -13,7 +13,7 @@ body {
   height: 120px;
   width: 100%;
   background: #F5F4F1;
-  padding: 20px;
+  padding: 20px 20px 20px 0;
   z-index: 100;
   top: 0;
 }
@@ -39,6 +39,7 @@ h1 {
   font-style: normal;
   font-size: 40px;
   line-height: 35px;
+  padding-left: 20px;
 }
 
 #pc-nav ul {
@@ -1005,12 +1006,12 @@ article img {
   color: #F4AB90;
 }
 
-#FLOW {
+#Follow {
   text-align: center;
   padding: 50px 0;
 }
 
-#FLOW .sns-link {
+#Follow .sns-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1021,12 +1022,12 @@ article img {
       flex-wrap: wrap;
 }
 
-#FLOW .sns-link li {
+#Follow .sns-link li {
   width: 20px;
   color: #13274B;
 }
 
-#FLOW .sns-link img {
+#Follow .sns-link img {
   color: #13274B;
 }
 
