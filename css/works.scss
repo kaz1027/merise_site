@@ -1,0 +1,118 @@
+/*==================================================
+ギャラリーのためのcss
+===================================*/
+#w-wrapper {
+    max-width: 1500px;
+    margin: 150px auto;
+}
+
+.gallery{
+    display: grid;
+    gap: 26px;
+    grid-template-columns: repeat(3, 1fr);
+    // columns: 3;/*段組みの数*/
+    padding:50px 15px;/*ギャラリー左右に余白をつける*/
+    }
+    
+.gallery li {
+    margin-bottom: 20px;/*各画像下に余白をつける*/
+    height: 300px;
+}
+
+/*ギャラリー内のイメージは横幅100%にする*/
+.gallery img{
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;/*画像の下にできる余白を削除*/
+}
+
+.gallery img:hover {
+    opacity: 0.6;
+    transition-duration: 0.3s;
+}
+
+/*　横幅900px以下の段組み設定　*/
+@media only screen and (max-width: 900px) {
+    .gallery{
+        display: grid;
+        gap: 26px;
+        grid-template-columns: repeat(2, 1fr);
+        // columns: 3;/*段組みの数*/
+        padding:0 15px;/*ギャラリー左右に余白をつける*/
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    .gallery{
+        display: grid;
+        gap: 0 10px;
+        grid-template-columns: repeat(1, 1fr);
+        // columns: 3;/*段組みの数*/
+        
+    }	
+}
+
+
+/*========= レイアウトのためのCSS ===============*/
+    
+    
+    
+    a:hover,
+    a:active{
+        text-decoration: none;
+    }
+    
+    p{
+        margin:0 10px 10px 10px;
+        word-wrap : break-word;
+    }
+    
+    /*画像を出現させるアニメーションCSS*/
+    
+    .flipLeft{
+    animation-name: flipLeft;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+    perspective-origin: left center;
+    opacity: 0;
+    }
+    
+    @keyframes flipLeft{
+    from {
+        transform: perspective(600px) translate3d(0, 0, 0) rotateY(30deg);
+        opacity: 0;
+    }
+    
+    to {
+        transform: perspective(600px) translate3d(0, 0, 0) rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+
+p{
+	margin:0 10px 10px 10px;
+	word-wrap : break-word;
+}
+
+/*画像を出現させるアニメーションCSS*/
+
+.flipLeft{
+animation-name: flipLeft;
+animation-duration:0.5s;
+animation-fill-mode:forwards;
+perspective-origin: left center;
+opacity: 0;
+}
+
+@keyframes flipLeft{
+    from {
+        transform: perspective(600px) translate3d(0, 0, 0) rotateY(30deg);
+        opacity: 0;
+    }
+
+    to {
+    transform: perspective(600px) translate3d(0, 0, 0) rotateY(0deg);
+    opacity: 1;
+    }
+}

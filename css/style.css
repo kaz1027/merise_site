@@ -1023,7 +1023,6 @@ article img {
 }
 
 #Follow .sns-link li {
-  width: 20px;
   color: #13274B;
 }
 
@@ -1033,7 +1032,7 @@ article img {
 
 .sns-link li {
   display: inline-block;
-  margin: 50px 20px;
+  margin: 50px 0;
 }
 
 .sns-link li img {
@@ -1042,5 +1041,11 @@ article img {
 
 .footer-contents {
   text-align: center;
+}
+
+@media (max-width: 767px) {
+  .sns-link li img {
+    width: 20px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
