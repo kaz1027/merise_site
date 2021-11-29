@@ -1,0 +1,127 @@
+#com-container {
+  margin: 150px 0 0 0;
+}
+
+#ListContaner {
+  width: 100%;
+  background-color: #fff;
+}
+
+#ListContaner .CompanyList {
+  width: 96%;
+  max-width: 900px;
+  margin: 100px auto;
+  padding: 80px 10px;
+}
+
+#ListContaner .CompanyList li {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  line-height: 30px;
+}
+
+#ListContaner .CompanyList dl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#ListContaner .CompanyList dl dt {
+  padding-left: 40px;
+  font-weight: bold;
+}
+
+#ListContaner .CompanyList dl dd {
+  width: 65%;
+  text-align: left;
+}
+
+.menber {
+  max-width: 1000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 50px auto;
+}
+
+.menber .menber-contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 30px;
+}
+
+.menber .menber-contents img {
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  vertical-align: middle;
+  margin: 20px auto;
+}
+
+.menber .menber-contents .m-text {
+  text-align: center;
+}
+
+.menber .menber-contents .m-text .m-position {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.menber .menber-contents .m-text .m-name {
+  font-size: 20px;
+  line-height: 40px;
+}
+
+@media (max-width: 767px) {
+  .menber {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .menber img {
+    border-radius: 50%;
+    width: 120px !important;
+    height: 120px !important;
+    -o-object-fit: cover;
+       object-fit: cover;
+    vertical-align: middle;
+    margin: 20px auto;
+  }
+  .CompanyList {
+    font-size: 14px;
+  }
+  .m-text {
+    text-align: center;
+  }
+  .m-text .m-position {
+    font-size: 11px !important;
+    font-weight: bold;
+  }
+  .m-text .m-name {
+    font-size: 16px !important;
+    line-height: 40px;
+  }
+}
+/*# sourceMappingURL=company.css.map */
