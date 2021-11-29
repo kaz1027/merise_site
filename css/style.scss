@@ -943,7 +943,7 @@ article {
         justify-content: center;
         flex-wrap: wrap;
         li {
-            width: 20px;
+            // width: 20px;
             color: #13274B;
         }
         img {
@@ -955,7 +955,7 @@ article {
 
 .sns-link li{
     display: inline-block;
-    margin: 50px 20px;
+    margin: 50px 0;
 }
 
 .sns-link li img{
@@ -967,8 +967,8 @@ article {
 }
 
 
-// @media (min-width: 767px) {
-//     .btn_text {
-//         font-size: 10px;
-//     }
-// }
+@media (max-width: 767px) {
+    .sns-link li img{
+        width:20px;
+    }
+}
