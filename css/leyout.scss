@@ -221,6 +221,12 @@
 	animation-fill-mode:forwards;
 	opacity:0;
 	}
+	.fadeUp2{
+	animation-name:fadeUpAnime;
+	animation-duration:2s;
+	animation-fill-mode:forwards;
+	opacity:0;
+	}
 	
 	
 	@keyframes fadeUpAnime{
@@ -273,6 +279,13 @@
 	.fadeLeft2{
 	animation-name:fadeLeftAnime;
 	animation-duration:2s;
+	animation-fill-mode:forwards;
+	opacity:0;
+	}
+	
+	.fadeLeft3{
+	animation-name:fadeLeftAnime;
+	animation-duration:3s;
 	animation-fill-mode:forwards;
 	opacity:0;
 	}
