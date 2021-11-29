@@ -1,7 +1,7 @@
 @charset "UTF-8";
 #s-container {
-  margin-top: 160px;
-  padding: 0 10px;
+  padding: 160px 10px 0 10px;
+  min-height: 100vh;
 }
 
 #s-wrapper {
@@ -89,7 +89,7 @@
     margin-top: 50px;
   }
   .s-right .s_toptext {
-    margin-bottom: 50px;
+    margin-top: 100px;
     line-height: 30px;
     font-size: 13px;
   }
@@ -138,6 +138,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 .right-img-ver .s-left-contents {
@@ -207,7 +209,7 @@
             order: 2;
     width: 100%;
     padding: 50px 30px;
-    height: 500px;
+    height: 400px;
   }
   .right-img-ver .s-left-contents .s-contents-title {
     font-size: 20px;
@@ -215,7 +217,7 @@
   .right-img-ver .s-left-contents .s-contents-text {
     line-height: 30px;
     font-family: dnp-shuei-mgothic-std, sans-serif;
-    font-size: 16px;
+    font-size: 13px;
     border-bottom: solid 2px;
     padding: 30px 0;
   }
@@ -224,6 +226,9 @@
         -ms-flex-order: 1;
             order: 1;
     height: 400px;
+  }
+  .s-contents-price {
+    font-size: 25px !important;
   }
 }
 
@@ -241,6 +246,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 .left-img-ver .s-right-contents {
@@ -314,15 +321,15 @@
             order: 2;
     width: 100%;
     padding: 50px 30px;
-    height: 500px;
+    height: 400px;
   }
-  .left-img-ver .s-right-contents .s-contents-title {
+  .left-img-ver .s-right-contents .s-RightContents-title {
     font-size: 20px;
   }
-  .left-img-ver .s-right-contents .s-contents-text {
+  .left-img-ver .s-right-contents .s-RightContents-text {
     line-height: 30px;
     font-family: dnp-shuei-mgothic-std, sans-serif;
-    font-size: 16px;
+    font-size: 13px;
     border-bottom: solid 2px;
     padding: 30px 0;
   }
@@ -336,6 +343,9 @@
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  .s-contents-price {
+    font-size: 20px;
   }
 }
 
@@ -397,6 +407,10 @@
   max-width: 500px;
 }
 
+li {
+  padding: 0 3%;
+}
+
 .flow-contents1 {
   padding-bottom: 20px;
 }
@@ -411,20 +425,19 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: solid 2px;
-  padding-bottom: 10px;
+  border-bottom: solid 1px;
+  padding-bottom: 20px;
   margin-top: 50px;
 }
 
 .flow-contents .flow-num {
   border: solid 1px;
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
-  line-height: 60px;
+  line-height: 50px;
   text-align: center;
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 16px;
 }
 
 .flow-contents .flow-text {
@@ -442,19 +455,8 @@
   font-weight: bold;
 }
 
-.flow-icon1::after {
-  font-family: 'Material Icons';
-  content: '\f187';
-  font-size: 80px;
-  color: #000;
-}
-
-.flow-icon2 {
-  color: #000;
-}
-
-.flow-icon2 img {
-  width: 80px;
+.flow-icon img {
+  width: 50px;
 }
 
 .f-formBtn {
@@ -499,12 +501,78 @@
   top: 15%;
 }
 
-@media (max-width: 481px) {
-  #flow {
-    padding: 0 50px;
+.flow-icon-phone {
+  padding-top: 10px;
+}
+
+.flow-icon-phone img {
+  width: 30px;
+}
+
+@media (min-width: 767px) {
+  .flow-icon-phone {
+    display: none;
   }
+}
+
+@media (max-width: 767px) {
   dd {
     display: none;
+  }
+  .flow {
+    max-width: 350px;
+    margin: 0 30px;
+  }
+  .flow-text {
+    width: 70%;
+    font-weight: normal;
+    font-size: 13px;
+  }
+  .f-formBtn {
+    font-size: 10px;
+  }
+  .f-formBtn a {
+    font-size: 10px;
+  }
+  .f-formBtn-a {
+    border: solid 1px black;
+    padding: 10px 30px !important;
+    background-color: black;
+    color: #fff;
+    font-size: 10px !important;
+    position: relative;
+  }
+  .f-formBtn-a::after {
+    position: absolute;
+    right: 5%;
+    font-family: 'Material Icons';
+    content: '\e5c8';
+    font-size: 10px !important;
+    color: #fff;
+    line-height: 22px;
+  }
+  .f-formBtn-a:hover {
+    background-color: #F5F4F1;
+    color: black;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .f-formBtn-a:hover::after {
+    position: absolute;
+    right: 5%;
+    font-family: 'Material Icons';
+    content: '\e5c8';
+    font-size: 10px !important;
+    color: black;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    line-height: 22px;
+  }
+  .flow-contents1 {
+    padding-bottom: 40px;
+  }
+  .flow-icon-phone {
+    width: 20px;
   }
 }
 /*# sourceMappingURL=servis.css.map */
