@@ -74,17 +74,17 @@ $('.fadeUpTrigger').each(function(){ //fadeUpTriggerというクラス名が
 		$(this).removeClass('fadeUp');// 画面外に出たらfadeUpというクラス名を外す
 		}
 		});
-    //4-1 ふわっ（左から）
-	$('.fadeLeftTrigger').each(function(){ //fadeLeftTriggerというクラス名が
+$('.fadeUpTrigger2').each(function(){ //fadeUpTriggerというクラス名が
 		var elemPos = $(this).offset().top-50;//要素より、50px上の
 		var scroll = $(window).scrollTop();
 		var windowHeight = $(window).height();
 		if (scroll >= elemPos - windowHeight){
-		$(this).addClass('fadeLeft');// 画面内に入ったらfadeLeftというクラス名を追記
+		$(this).addClass('fadeUp2');// 画面内に入ったらfadeUpというクラス名を追記
 		}else{
-		$(this).removeClass('fadeLeft');// 画面外に出たらfadeLeftというクラス名を外す
+		$(this).removeClass('fadeUp2');// 画面外に出たらfadeUpというクラス名を外す
 		}
 		});
+    //4-1 ふわっ（左から）
 	$('.fadeLeftTrigger').each(function(){ //fadeLeftTriggerというクラス名が
 		var elemPos = $(this).offset().top-50;//要素より、50px上の
 		var scroll = $(window).scrollTop();
@@ -113,6 +113,16 @@ $('.fadeUpTrigger').each(function(){ //fadeUpTriggerというクラス名が
 		$(this).addClass('fadeLeft2');// 画面内に入ったらfadeLeftというクラス名を追記
 		}else{
 		$(this).removeClass('fadeLeft2');// 画面外に出たらfadeLeftというクラス名を外す
+		}
+		});
+	$('.fadeLeftTrigger3').each(function(){ //fadeLeftTriggerというクラス名が
+		var elemPos = $(this).offset().top-50;//要素より、50px上の
+		var scroll = $(window).scrollTop();
+		var windowHeight = $(window).height();
+		if (scroll >= elemPos - windowHeight){
+		$(this).addClass('fadeLeft3');// 画面内に入ったらfadeLeftというクラス名を追記
+		}else{
+		$(this).removeClass('fadeLeft3');// 画面外に出たらfadeLeftというクラス名を外す
 		}
 		});
     //4-1 ふわっ（右から）
@@ -144,6 +154,16 @@ $('.fadeUpTrigger').each(function(){ //fadeUpTriggerというクラス名が
 		$(this).addClass('fadeRight2');// 画面内に入ったらfadeRightというクラス名を追記
 		}else{
 		$(this).removeClass('fadeRight2');// 画面外に出たらfadeRightというクラス名を外す
+		}
+		});
+	$('.fadeRightTrigger3').each(function(){ //fadeRightTriggerというクラス名が
+		var elemPos = $(this).offset().top-50;//要素より、50px上の
+		var scroll = $(window).scrollTop();
+		var windowHeight = $(window).height();
+		if (scroll >= elemPos - windowHeight){
+		$(this).addClass('fadeRight3');// 画面内に入ったらfadeRightというクラス名を追記
+		}else{
+		$(this).removeClass('fadeRight3');// 画面外に出たらfadeRightというクラス名を外す
 		}
 		});
 
