@@ -1,0 +1,16 @@
+#r-wrapper {
+    padding-top: 150px;
+    min-height: 100vh;
+}
+
+.recruit-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        margin: 70px 5px;
+    }
+}
+.recruit-text {
+    text-align: center;
+}
