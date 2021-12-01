@@ -1,0 +1,63 @@
+.C_Btn {
+  text-align: right;
+}
+
+#contact-wrapper {
+  margin: 0 auto;
+  max-width: 700px;
+  padding: 160px 0;
+}
+
+.contactform {
+  margin: 100px 5px;
+}
+
+.btn {
+  margin: 10px 0;
+  padding: 10px 30px;
+  background-color: #EF7748;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: #F4AB90;
+}
+
+.confirm_form {
+  max-width: 700px;
+  margin: 80px auto 0 auto;
+  padding: 0 5%;
+  text-align: center;
+  line-height: 20px;
+}
+
+.confirm_form_contents {
+  margin: 30px 0 7px 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+.form_conclusion {
+  text-align: center;
+  margin: 200px 0 30px 0;
+}
+
+.Btn- {
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  #contact-wrapper {
+    font-size: 13px;
+  }
+  .contactform {
+    font-size: 13px;
+  }
+  .btn {
+    font-size: 13px;
+  }
+  .confirm_form {
+    font-size: 13px;
+  }
+}
+/*# sourceMappingURL=form.css.map */

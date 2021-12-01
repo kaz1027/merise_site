@@ -1,7 +1,7 @@
 
 #v-container {
-    margin: 160px auto 0 auto;
-    padding: 0 10px;
+    margin: 0 auto;
+    padding: 160px 10px 0 10px;
     max-width: 1000px;
     position: relative;
 }
@@ -58,7 +58,7 @@
     .v-top-img1 {
         position: absolute;
         right: 15%;
-        bottom: 0;
+        bottom: 20%;
         z-index: -2;
         img {
             width: 300px;
@@ -71,7 +71,7 @@
     .v-top-img2 {
         position: absolute;
         right: -10%;
-        bottom: 10%;
+        bottom: 30%;
         z-index: -1;
         img {
             width: 300px;
@@ -98,9 +98,9 @@ section {
     width: 100%;
     max-width: 1200px;
     .v-icon {
-        width: 40%;
+        width: 30%;
         img {
-            width: 500px;
+            width: 400px;
         }
     }
     .v-explain {
