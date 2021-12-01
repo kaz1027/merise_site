@@ -3,10 +3,11 @@
 	position: fixed;
 	width: 100%;
 	height: 100%;
-	background: #EF7748;
+	// background: #F4AB90;
 	z-index: 9999999;
 	text-align:center;
-	color:#fff;
+	color: #13274B;
+	background: #D8CDC1;
 }
 
 #splash-logo {
@@ -36,61 +37,61 @@ body.appear .splashbg2{
 }
 
 /*上に消えるエリア*/
-body.appear .splashbg1{
-	animation-name:PageAnime;
-	animation-duration:1.4s;
-	animation-timing-function:ease-in-out;
-	animation-fill-mode:forwards;
-    content: "";
-    position:fixed;
-	z-index: 999;
-    width: 100%;
-    height: 100vh;
-    bottom:50%;
-	left:0;
-    transform: scaleY(1);
-    background-color: #EF7748;/*伸びる背景色の設定*/
-}
+// body.appear .splashbg1{
+// 	animation-name:PageAnime;
+// 	animation-duration:1.4s;
+// 	animation-timing-function:ease-in-out;
+// 	animation-fill-mode:forwards;
+//     content: "";
+//     position:fixed;
+// 	z-index: 999;
+//     width: 100%;
+//     height: 100vh;
+//     bottom:50%;
+// 	left:0;
+//     transform: scaleY(1);
+//     background-color: #F4AB90;/*伸びる背景色の設定*/
+// }
 
-@keyframes PageAnime{
-	0% {
-		transform-origin:top;
-		transform:scaleY(1);
-	}
+// @keyframes PageAnime{
+// 	0% {
+// 		transform-origin:top;
+// 		transform:scaleY(1);
+// 	}
 
-	100% {
-		transform-origin:top;
-		transform:scaleY(0);
-	}
-}
+// 	100% {
+// 		transform-origin:top;
+// 		transform:scaleY(0);
+// 	}
+// }
 
-/*下に消えるエリア*/
-body.appear .splashbg2{
-    animation-name:PageAnime2;
-	animation-duration:1.4s;
-	animation-timing-function:ease-in-out;
-	animation-fill-mode:forwards;
-    content: "";
-    position:fixed;
-	z-index: 999;
-    width: 100%;
-    height: 100vh;
-    top: 50%;
-	left:0;
-    transform: scaleY(1);
-    background-color:#EF7748;/*伸びる背景色の設定*/
-}
+// /*下に消えるエリア*/
+// body.appear .splashbg2{
+//     animation-name:PageAnime2;
+// 	animation-duration:1.4s;
+// 	animation-timing-function:ease-in-out;
+// 	animation-fill-mode:forwards;
+//     content: "";
+//     position:fixed;
+// 	z-index: 999;
+//     width: 100%;
+//     height: 100vh;
+//     top: 50%;
+// 	left:0;
+//     transform: scaleY(1);
+//     background-color:#EF7748;/*伸びる背景色の設定*/
+// }
 
-@keyframes PageAnime2{
-	0% {
-		transform-origin:bottom;
-		transform:scaleY(1);
-	}
-	100% {
-		transform-origin:bottom;
-		transform:scaleY(0);
-	}
-}
+// @keyframes PageAnime2{
+// 	0% {
+// 		transform-origin:bottom;
+// 		transform:scaleY(1);
+// 	}
+// 	100% {
+// 		transform-origin:bottom;
+// 		transform:scaleY(0);
+// 	}
+// }
 
 /*画面遷移の後現れるコンテンツ設定*/
 #container{
@@ -102,7 +103,7 @@ body.appear .splashbg2{
 /*bodyにappearクラスがついたら出現*/
 body.appear #container{
 	animation-name:PageAnimeAppear;
-	animation-duration:1s;
+	animation-duration:2s;
 	animation-delay:0.2s;
 	animation-fill-mode:forwards;
 	opacity: 0;

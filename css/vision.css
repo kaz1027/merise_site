@@ -1,7 +1,7 @@
 @charset "UTF-8";
 #v-container {
-  margin: 160px auto 0 auto;
-  padding: 0 10px;
+  margin: 0 auto;
+  padding: 160px 10px 0 10px;
   max-width: 1000px;
   position: relative;
 }
@@ -63,7 +63,7 @@
   .v-top-img1 {
     position: absolute;
     right: 15%;
-    bottom: 0;
+    bottom: 20%;
     z-index: -2;
   }
   .v-top-img1 img {
@@ -77,7 +77,7 @@
   .v-top-img2 {
     position: absolute;
     right: -10%;
-    bottom: 10%;
+    bottom: 30%;
     z-index: -1;
   }
   .v-top-img2 img {
@@ -114,11 +114,11 @@ section {
 }
 
 .left_icon-ver .v-icon {
-  width: 40%;
+  width: 30%;
 }
 
 .left_icon-ver .v-icon img {
-  width: 500px;
+  width: 400px;
 }
 
 .left_icon-ver .v-explain {

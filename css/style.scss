@@ -5,6 +5,9 @@ body {
     color: #13274B;
 }
 
+h3 {
+    font-family: "游ゴシック体", YuGothic;
+}
 /*===========================================================*/
 /* ヘッダー
 /*===========================================================*/
@@ -91,29 +94,90 @@ h1 {
 /* ハンバーガーメニュー
 /*===========================================================*/
 
+// #g-nav{
+//     /*position:fixed;にし、z-indexの数値を小さくして最背面へ*/
+//     position:fixed;
+// 	z-index: -1;
+// 	opacity: 0;/*はじめは透過0*/
+//     /*ナビの位置と形状*/
+// 	top:0;
+// 	width:100%;
+//     height: 100vh;/*ナビの高さ*/
+// 	background:#D8CDC1;
+//     /*動き*/
+// 	transition: all 0.3s;
+// }
+
+// /*アクティブクラスがついたら透過なしにして最前面へ*/
+// #g-nav.panelactive{
+// 	opacity: 1;
+// 	z-index:999;
+// }
+
+// /*ナビゲーション*/
+// #g-nav ul {
+//     display: none;
+//     /*ナビゲーション天地中央揃え*/
+//     position: absolute;
+//     z-index: 999;
+//     top:50%;
+//     left:50%;
+//     transform: translate(-50%,-50%);
+// }
+
+// #g-nav.panelactive ul {
+//     display: block;
+// }
+
+// /*リストのレイアウト設定*/
+
+// #g-nav li{
+// 	list-style: none;
+//     text-align: center; 
+// }
+
+// #g-nav li a{
+// 	color: #13274B;
+// 	text-decoration: none;
+// 	padding:10px;
+// 	display: block;
+// 	text-transform: uppercase;
+// 	letter-spacing: 0.1em;
+// 	font-weight: bold;
+// }
+
 #g-nav{
-    /*position:fixed;にし、z-indexの数値を小さくして最背面へ*/
+    /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
     position:fixed;
-	z-index: -1;
-	opacity: 0;/*はじめは透過0*/
-    /*ナビの位置と形状*/
+    z-index: 999;
+    /*ナビのスタート位置と形状*/
 	top:0;
+    right: -120%;
 	width:100%;
     height: 100vh;/*ナビの高さ*/
 	background:#D8CDC1;
     /*動き*/
-	transition: all 0.3s;
+	transition: all 0.6s;
 }
 
-/*アクティブクラスがついたら透過なしにして最前面へ*/
+/*アクティブクラスがついたら位置を0に*/
 #g-nav.panelactive{
-	opacity: 1;
-	z-index:999;
+    right: 0;
+}
+
+/*ナビゲーションの縦スクロール*/
+#g-nav.panelactive #g-nav-list{
+    /*ナビの数が増えた場合縦スクロール*/
+    position: fixed;
+    z-index: 999; 
+    width: 100%;
+    height: 100vh;/*表示する高さ*/
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 /*ナビゲーション*/
 #g-nav ul {
-    display: none;
     /*ナビゲーション天地中央揃え*/
     position: absolute;
     z-index: 999;
@@ -122,15 +186,11 @@ h1 {
     transform: translate(-50%,-50%);
 }
 
-#g-nav.panelactive ul {
-    display: block;
-}
-
 /*リストのレイアウト設定*/
 
 #g-nav li{
 	list-style: none;
-    text-align: center; 
+    text-align: center;
 }
 
 #g-nav li a{
@@ -261,6 +321,7 @@ h2 {
     -webkit-text-stroke: 1px #000;
     line-height: 80px;
     z-index: 10;
+    font-family: "游ゴシック体", YuGothic;
 }
 
 .top_lead2 {
@@ -278,7 +339,11 @@ h2 {
 
 @media (max-width: 767px) {
     .top_lead {
-        font-size: 30px;
+        position: absolute;
+        top:250px;
+        font-size: 25px;
+        line-height: 60px;
+
     }
     .top_lead2 {
         font-size: 70px;
@@ -296,7 +361,10 @@ section {
 
 #VISION {
     padding: 90px 10px;
+}
 
+p {
+    font-family: "游ゴシック体", YuGothic;
 }
 .v_container {
     display: flex;
@@ -328,7 +396,7 @@ section {
     }
 
     .vision-box {
-        margin: 0 50px;
+        
         h3 {
             font-weight: 800;
             color: #fff;
@@ -419,6 +487,7 @@ section {
 
 .yajirushi {
     position: relative;
+    margin-right: 10px;
 }
 
 .v-btn::after {
@@ -452,6 +521,15 @@ section {
 @media (max-width: 767px) {
     #VISION {
         background-color: #D8CDC1;
+        width: 100%;
+        padding: 90px 20px 30px 20px;
+        h3 {
+            font-size: 20px;
+            white-space: normal;
+        }
+        p{
+            font-size: 13px;
+        }
     }
     .vertical::after {
         display: none;
@@ -459,9 +537,7 @@ section {
     .vertical {
         display: none;
     }
-    .v-btn {
-        text-align: center;
-    }
+
     .v-box {
         display: none;
     }
@@ -526,9 +602,6 @@ article {
     }
 }
 
-// #SERVICE {
-//     padding: 50px 10px;
-// }
 
 #s-contents {
     display: flex;
@@ -671,15 +744,15 @@ article {
 
 .separate {
     display: flex;
-    width: 100%;
+    width: 100% !important;
     // background-color: #fff;
-    #CONPANY {
+    #COMPANY {
         width: 50%;
         padding: 50px 10px;
         background-color: #D8CDC1;
         text-align: center;
     }
-    #RICRUT {
+    #RECRUIT {
         width: 50%;
         padding: 50px 10px;
         background-color: #13274B;
@@ -691,13 +764,13 @@ article {
 @media (max-width: 767px) {
     .separate {
         display: block;
-        #CONPANY {
+        #COMPANY {
             width: 100%;
             padding: 50px 10px;
             background-color: #D8CDC1;
             text-align: center;
         }
-        #RICRUT {
+        #RECRUIT {
             width: 100%;
             padding: 50px 10px;
             background-color: #13274B;
@@ -706,6 +779,7 @@ article {
         }
     }
 }
+
 
 .ricrut-btn{
     /*アニメーションの起点とするためrelativeを指定*/
@@ -827,7 +901,7 @@ article {
 /*ボタン内spanの形状*/
 .form-btn span {
 	position: relative;
-	z-index: 3;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
+	// z-index: 3;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
 	color: #13274B;
 }
 
@@ -960,6 +1034,7 @@ article {
 
 .sns-link li img{
     width:30px;
+    margin: 0 10px;
 }
 
 .footer-contents {

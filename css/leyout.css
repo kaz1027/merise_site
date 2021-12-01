@@ -493,8 +493,8 @@
 .blur {
   -webkit-animation-name: blurAnime;
           animation-name: blurAnime;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
