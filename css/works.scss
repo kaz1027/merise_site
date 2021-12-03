@@ -8,6 +8,12 @@
     padding: 160px 10px;
 }
 
+@media (max-width: 767px) {
+    #w-wrapper {
+        padding: 80px 10px;
+    }
+}
+
 .gallery{
     display: grid;
     gap: 26px;
