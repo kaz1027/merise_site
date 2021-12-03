@@ -4,6 +4,13 @@
   min-height: 100vh;
 }
 
+@media (max-width: 767px) {
+  #s-container {
+    padding: 80px 10px 0 10px;
+    min-height: 100vh;
+  }
+}
+
 #s-wrapper {
   max-width: 1000px;
   position: relative;
@@ -23,8 +30,6 @@
 .s-right .s_lead {
   font-size: 40px;
   font-weight: 800;
-  color: #fff;
-  -webkit-text-stroke: 1px #000;
   line-height: 80px;
   margin: 100px 0 50px 0;
 }
@@ -89,6 +94,11 @@
     margin-top: 50px;
   }
   .s-right .s_toptext {
+    margin-top: 100px;
+    line-height: 30px;
+    font-size: 13px;
+  }
+  .s_toptext {
     margin-top: 100px;
     line-height: 30px;
     font-size: 13px;
@@ -425,7 +435,6 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: solid 1px;
   padding-bottom: 20px;
   margin-top: 50px;
 }

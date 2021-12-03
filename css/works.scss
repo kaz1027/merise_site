@@ -1,30 +1,38 @@
 /*==================================================
 ギャラリーのためのcss
 ===================================*/
+
 #w-wrapper {
     max-width: 1500px;
     margin: 0 auto;
-    padding: 160px;
+    padding: 160px 10px;
+}
+
+@media (max-width: 767px) {
+    #w-wrapper {
+        padding: 80px 10px;
+    }
 }
 
 .gallery{
     display: grid;
     gap: 26px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(366px, 1fr));
     // columns: 3;/*段組みの数*/
     padding:50px 15px;/*ギャラリー左右に余白をつける*/
     }
     
 .gallery li {
     margin-bottom: 20px;/*各画像下に余白をつける*/
-    height: 300px;
 }
 
 /*ギャラリー内のイメージは横幅100%にする*/
 .gallery img{
     width: 100%;
     height: auto;
-    vertical-align: bottom;/*画像の下にできる余白を削除*/
+    // vertical-align: bottom;/*画像の下にできる余白を削除*/
+    margin: 10px 0;
+    
 }
 
 .gallery img:hover {
@@ -35,23 +43,23 @@
 /*　横幅900px以下の段組み設定　*/
 @media only screen and (max-width: 900px) {
     .gallery{
-        display: grid;
-        gap: 26px;
-        grid-template-columns: repeat(2, 1fr);
-        // columns: 3;/*段組みの数*/
+        // display: grid;
+        // gap: 26px;
+        // grid-template-columns: repeat(2, 1fr);
+        // // columns: 3;/*段組みの数*/
         padding:0 15px;/*ギャラリー左右に余白をつける*/
     }
 }
 
-@media only screen and (max-width: 490px) {
-    .gallery{
-        display: grid;
-        gap: 0 10px;
-        grid-template-columns: repeat(1, 1fr);
-        // columns: 3;/*段組みの数*/
+// @media only screen and (max-width: 490px) {
+//     .gallery{
+//         display: grid;
+//         gap: 0 10px;
+//         grid-template-columns: repeat(1, 1fr);
+//         // columns: 3;/*段組みの数*/
         
-    }	
-}
+//     }	
+// }
 
 
 /*========= レイアウトのためのCSS ===============*/

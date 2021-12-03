@@ -3,6 +3,7 @@
 }
 
 
+
 #ListContaner{
     width: 100%;
     background-color: #fff;
@@ -12,9 +13,9 @@
         margin: 100px auto;
         padding: 80px 10px;
         li {
-            border-bottom: 1px solid #ccc;
-            margin-bottom: 25px;
-            padding-bottom: 10px;
+            // border-bottom: 1px solid #ccc;
+            // margin-bottom: 25px;
+            padding: 20px;
             line-height: 30px;
             // letter-spacing: 1px;
         }
@@ -36,6 +37,17 @@
     }
 }
 
+@media (max-width: 767px) {
+    #com-container {
+        padding: 80px 0 0 0;
+    }
+    #ListContaner{
+        .CompanyList {
+            margin: 70px auto;
+            padding: 40px 10px;
+        }
+    }
+}
 
 
 .menber {
@@ -81,7 +93,7 @@
             height: 120px !important;
             object-fit: cover;
             vertical-align: middle;
-            margin: 20px auto;
+            margin: 0 auto;
         }
     }
     .CompanyList {

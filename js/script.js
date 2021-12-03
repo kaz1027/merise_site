@@ -7,15 +7,19 @@
 var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0;
 		if (windowwidth > 768){
 			var responsiveImage = [//PC用の画像
-				{ src: './img/top-img1.png'},
-				{ src: './img/top-img2.png'},
-				{ src: './img/top-img3.png'}
+				{ src: './img/top/top0.png'},
+				{ src: './img/top/top2.png'},
+				{ src: './img/top/top4.png'},
+				{ src: './img/top/top7.png'},
+				{ src: './img/top/top10.png'}
 			];
 		} else {
 			var responsiveImage = [//タブレットサイズ（768px）以下用の画像
-				{ src: './img/top-img1.png'},
-				{ src: './img/top-img2.png'},
-				{ src: './img/top-img3.png'}
+				{ src: './img/top/top0.png'},
+				{ src: './img/top/top2.png'},
+				{ src: './img/top/top4.png'},
+				{ src: './img/top/top7.png'},
+				{ src: './img/top/top10.png'}
 			];
 		}
 
@@ -234,9 +238,14 @@ function delayScrollAnime() {
 }
 
 // 画面をスクロールをしたら動かしたい場合の記述
-	$(window).scroll(function (){
-		delayScrollAnime();/* アニメーション用の関数を呼ぶ*/
-	});// ここまで画面をスクロールをしたら動かしたい場合の記述
+$(window).scroll(function (){
+	delayScrollAnime();/* アニメーション用の関数を呼ぶ*/
+});// ここまで画面をスクロールをしたら動かしたい場合の記述
+
+// 画面が読み込まれたらすぐに動かしたい場合の記述
+$(window).on('load', function(){
+	delayScrollAnime();/* アニメーション用の関数を呼ぶ*/
+});// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
 
 // ページが読み込まれたらすぐに動かしたい場合の記述
 $(window).on('load',function(){

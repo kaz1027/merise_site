@@ -4,27 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>merise design</title>
-    <meta name="description" content="merise designはデザインでブランディングをサポートしています。
+    <title>MeRISE株式会社 | 港区のデザイン会社</title>
+    <meta name="description" content="私たちMeRISE株式会社はデザインでブランディングをサポートしています。
     グラフィックデザイン、ウェブデザイン、店舗の内装からTシャツやライターに至るまで、店舗運営に必要なほぼ全てツールを制作いたします
     一人一人のお客様に寄り添い、一貫したデザインコンセプトでブランディングをサポートします。">
-    <meta name="keywords"  content="店舗,経営,コンサルタント,コンサル,物件リサーチ,経理業務">
+    <meta name="keywords"  content="東京,港区,デザイン会社,ブランディング,マーケティング,グラフィックデザイン,店舗デザイン,ウェブデザイン,HP制作,ロゴ制作,経営,コンサルタント,コンサル,経理業務">
     <!--=============Google Font ===============-->
     <link href="https://fonts.googleapis.com/css?family=Lato:900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mukta+Vaani:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script>
-        (function(d) {
-          var config = {
-            kitId: 'vvv8wrz',
-            scriptTimeout: 3000,
-            async: true
-          },
-          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-        })(document);
-      </script>
+  (function(d) {
+    var config = {
+      kitId: 'vvv8wrz',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
     <!--==============レイアウトを制御する独自のCSSを読み込み===============-->
     <link rel="stylesheet" type="text/css" href="../css/reset.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
@@ -35,15 +38,15 @@
 
     <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
-<body>
-    <div id="splash">
-        <div id="splash-logo"><div class="fadeUp">RICURUIT</div></div>
-    </div>
+<body ontouchstart="">
+    <!-- <div id="splash">
+        <div id="splash-logo"><div class="fadeUp">RECURUIT</div></div>
+    </div> -->
     <div class="splashbg1"></div>
     <div class="splashbg2"></div>
-    <!-- <div id="container"> -->
-        <header id="h-wrapper">
-            <div id="header" class="fadeInTop">
+    <div id="r-container fadeInTop3">
+        <header id="h-wrapper" class="fadeInTop3">
+            <div id="header">
                 <h1><a href="../index.html">MeRISE<br>INC.</a></h1>
                 <nav id="pc-nav">
                     <ul id="page-link" class="gnavi">
@@ -78,13 +81,259 @@
         </header>
         <main>
             <div id="r-wrapper">
-                <h2 class="s-title fadeDownTop">RECRUIT</h2>
-                <p class="subtitle fadeDownTop">求人情報</p>
-                <div class="recruit-top fadeInTop2">
-                    <img src="../img/recrut_img/shazai.png" alt="">
+                <h2 class="s-title fadeInTop3">RECRUIT</h2>
+                <p class="subtitle fadeInTop3">求人情報</p>
+                <div id="r-topImg" class="blurTrigger">
+                    <img src="../img/recrut/article_img.jpg" alt="" class="fadeInTop3">
                 </div>
-                <p class="recruit-text fadeInTop2">現在募集は行っておりません</p>
+                <div class="r-TopRead">ミライズでは<br>
+                    一緒に働く仲間を<br>募集しています。</div>
             </div>
+            <div class="r-section1 fadeUpTrigger2">
+                <h2 class="r-title">募集職種</h2>
+                <div class="occupation" id="page-link">
+                    <a href="#recruit1" class="occupation1"><p>一般事務業務</p></a>
+                    <a href="#recruit2" class="occupation2"><p>デザイナー</p></a>
+                </div>
+            </div>
+
+            <div id="ListContaner">
+                <ul id="recruit1" class="r-description fadeUpTrigger2">
+                    <li>
+                        <dl>
+                            <dt>職　種</dt>
+                            <dd><b>一般事務業務</b></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>雇用形態</dt>
+                            <dd>正社員(使用期間有り：1〜6ヶ月)<br>
+                                ※スキル、経験に応じて変更あり(給与は本採用時と同額)</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>主な仕事内容</dt>
+                            <dd>
+                                経営コンサルティングを手掛ける当社にて、自社およびクライアントの事務業務をお任せします。<br>
+                                ・日計表の入力や、売上管理<br>
+                                ・契約書類管理<br>
+                                ・電話対応<br>
+                                ・勤怠管理<br>
+                                ・給与処理<br>
+                                ※その他、小口の管理など経理のサポート業務もお任せします。
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>応募資格</dt>
+                            <dd>・パソコンでの基本操作(Excel、Word等)ができる方<br>
+                                ・Excelによる関数計算が出来る方<br>
+                                ・事務経験をお持ちの方大歓迎です(業界不問)<br>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>給与</dt>
+                            <dd>月給20万円〜<br>
+                                ※給与内諸手当含む<br>
+                                ※経験・能力を考慮の上、入社後決定<br>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>勤務時間</dt>
+                            <dd>
+                                11:00~20:00(実働8時間)<br>
+                                ※残業は月10時間以内です<br>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>休日・休暇</dt>
+                            <dd>・完全週休2日制(土・日)<br>
+                                ・祝日<br>
+                                ・GW<br>
+                                ・夏季休暇<br>
+                                ・年末年始休暇<br>
+                                ・慶弔休暇
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>福利厚生・待遇</dt>
+                            <dd>・各種社会保険完備<br>
+                                ・定期健康診断(年1回)<br>
+                                ・昇給(業績による)<br>
+                                ・賞与(業績による)<br>
+                                ・交通費(月2万円まで)<br>
+                                ・家賃補助(社内規定による)<br>
+                                ・服装、髪型自由<br>
+                                ・オフィス内禁煙<br>
+                                ・社内フリードリンク（お茶、コーヒー等のドリンクを無料提供）
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>勤務地</dt>
+                            <dd>都営地下鉄各線「三田駅」<br>
+                                都営地下鉄各線「白金高輪駅」<br>
+                                京急線「泉岳寺駅」<br>
+                                各駅より徒歩15分以内
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>応募方法</dt>
+                            <dd>ページ下にある「✉︎応募する」より<br>
+                                履歴書(写真貼付)と職務経歴書をpdf形式にて添付し、送信してください。<br>
+                                3営業日以内に担当者よりご連絡いたします。
+                            </dd>
+                        </dl>
+                    </li>
+                    <div class="r-mail fadeUpTrigger2">
+                        <a href="mailto:nspdesign2012@gmail.com"><span></span>　応募する</a>
+                    </div>
+                </ul>
+            </div>
+
+            <div id="ListContaner">
+                <ul id="recruit2" class="r-description fadeUpTrigger2">
+                    <li>
+                        <dl>
+                            <dt>職　種</dt>
+                            <dd><b>デザイナー</b></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>雇用形態</dt>
+                            <dd>正社員(使用期間有り：6ヶ月)
+                                ※スキル、経験に応じて変更あり(給与は本採用時と同額)<br>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>主な仕事内容</dt>
+                            <dd>自社およびクライアントのデザイン制作業務をお任せします。<br>
+                                クライアントは、ナイトレジャー施設や居酒屋、カフェなどが中心で、既存のお客様がほとんどです。<br><br>
+                                
+                                あらゆる業態の店舗運営を支えている為、グラフィックのデザイン以外にも、
+                                店舗運営に必要なノベルティグッズや備品、ご要望があれば店内の写真撮影や動画作成と、デザイナーが手掛ける制作物も多岐に渡ります。<br>
+                                今後は、より深くサポート出来るよう、
+                                HPの作成や内装といった空間デザインにも力を入れて行きたいと思っています。<br>
+                                
+                                近くには公園があり、職場周辺には緑豊かな場所が多くあります。<br>
+                                社内ではラジオが流れていて、のびのびとした環境での作業が可能です！<br><br>
+                                
+                                「面白そうな事はやってみよう！」というのが社風です。<br>
+                                部署内全員で試行錯誤し、色々な経験を一緒に味わいながら、
+                                成長していける方のご応募をお待ちしてます！<br>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>応募資格</dt>
+                            <dd>・デザインソフト(Illustrator、Photoshop等)の基本操作ができる方<br>
+                                ・実務経験は問いませんが、独学や趣味で制作経験のある方
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>給与</dt>
+                            <dd>月給20万円〜<br>
+                                ※給与内諸手当含む<br>
+                                ※経験・能力を考慮の上、入社後決定<br>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>勤務時間</dt>
+                            <dd>
+                                11:00~20:00(実働8時間)<br>
+                                ※残業は月10時間以内です<br>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>休日・休暇</dt>
+                            <dd>・完全週休2日制(土・日)<br>
+                                ・祝日<br>
+                                ・GW<br>
+                                ・夏季休暇<br>
+                                ・年末年始休暇<br>
+                                ・慶弔休暇
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>福利厚生・待遇</dt>
+                            <dd>・各種社会保険完備<br>
+                                ・定期健康診断(年1回)<br>
+                                ・昇給(業績による)<br>
+                                ・賞与(業績による)<br>
+                                ・交通費(月2万円まで)<br>
+                                ・家賃補助(社内規定による)<br>
+                                ・服装、髪型自由<br>
+                                ・オフィス内禁煙<br>
+                                ・社内フリードリンク（お茶、コーヒー等のドリンクを無料提供）
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>勤務地</dt>
+                            <dd>東京都港区三田4-12-12-512</dt>
+                                ※転勤はありません
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>アクセス</dt>
+                            <dd>都営地下鉄各線「三田駅」<br>
+                                都営地下鉄各線「白金高輪駅」<br>
+                                京急線「泉岳寺駅」<br>
+                                各駅より徒歩15分以内
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>応募方法</dt>
+                            <dd>ページ下にある「✉︎応募する」より<br>
+                                ・履歴書(写真貼付)<br>
+                                ・職務経歴書<br>
+                                ・ポートフォリオ<br>
+                                上記３点をpdf形式にて添付し、送信してください。<br><br>
+                                
+                                3営業日以内に担当者よりご連絡いたします。
+                            </dd>
+                        </dl>
+                    </li>
+                    <div class="r-mail fadeUpTrigger2">
+                        <a href="mailto:nspdesign2012@gmail.com"><span></span>　応募する</a>
+                    </div>
+                </ul>
+            </div>
+            <div class="access">
+                <h2 class="s-title fadeInTop3">ACCESS</h2>
+                <p class="subtitle fadeInTop3">アクセス</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.3426283525214!2d139.7382396158427!3d35.64392918020307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bae7107c067%3A0x4c43ca31a651bde0!2z44CSMTA4LTAwNzMg5p2x5Lqs6YO95riv5Yy65LiJ55Sw77yU5LiB55uu77yR77yS4oiS77yR77yS!5e0!3m2!1sja!2sjp!4v1638355751954!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
         </main>
         <footer>
             <section id="CONTACT" class="fadeUpTrigger">
@@ -106,7 +355,7 @@
                 <p class="subtitle">SNSはこちら</p>
                 <ul class="sns-link">
                     <li><a href="#"><img src="../img/icon-tw.svg" alt="twitter" class="icon"></a></li>
-                    <li><a href="#"><img src="../img/icon-fb.svg" alt="FaceBook"></a></li>
+                    <!-- <li><a href="#"><img src="../img/icon-fb.svg" alt="FaceBook"></a></li> -->
                     <li><a href="#"><img src="../img/icon-insta.svg" alt="instagram"></a></li>
                 </ul>
                 <div class="footer-contents fadeUpTrigger">Copyright © by merise Co., Ltd. All rights reserved.</div>
